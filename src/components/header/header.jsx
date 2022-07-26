@@ -1,9 +1,9 @@
 import { Link } from "react-router-dom";
 import Login from "../login/login"
-import { NotificationModal } from './NotificationModal/NotificationModal';
 import { useState } from 'react';
 import { StyledHeader, HeaderFlexContainer } from './header.styled';
 import Logo from "../logo/logo";
+import {NotificationModal} from "../notificationModal/notification-modal";
 
 
 

@@ -1,5 +1,5 @@
 import { Link } from "react-router-dom";
-import Login from './LoginComponent/Login.jsx';
+import Login from "../login/login"
 import { NotificationModal } from './NotificationModal/NotificationModal';
 import { useState } from 'react';
 import { StyledHeader, HeaderFlexContainer } from './header.styled';

@@ -1,5 +1,5 @@
 import styled from "styled-components";
-import {BtnCard} from '../../../ProfilePage/cardProfile/CardInfo.styled'
+// import {BtnCard} from '../../../ProfilePage/cardProfile/CardInfo.styled'
 
 
 export const StyledNotificationModal = styled.div`
@@ -101,13 +101,13 @@ export const StyledNotificationModal = styled.div`
     }
 
     span {
-            font-weight: 400;
-            font-size: 12px;
-            line-height: 20px;
-            color: #777E91;
-        }
+        font-weight: 400;
+        font-size: 12px;
+        line-height: 20px;
+        color: #777E91;
+    }
 `
 
-export const BtnModal = styled(BtnCard)`
-    margin-left: 77px;
-`
+// export const BtnModal = styled(BtnCard)`
+//     margin-left: 77px;
+// `

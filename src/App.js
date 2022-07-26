@@ -26,7 +26,7 @@ function App() {
               {/*</Route>*/}
               {/*<Route path='/profile/edit' element={<EditProfile />}/>*/}
           </Route>
-          <Route path="*" element={<NotFoundPage />} />
+          {/*<Route path="*" element={<NotFoundPage />} />*/}
       </Routes>
   );
 }

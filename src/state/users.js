@@ -7,7 +7,8 @@ export const Users = [
         "description": "some words",
         "balance": 27.45,
         "cards": [],
-        "social": []
+        "social": [],
+        "achivments": "#3772FF"
     },
     {
         "id": 2,
@@ -17,7 +18,8 @@ export const Users = [
         "description": "some words",
         "balance": 3.22,
         "cards": [],
-        "social": []
+        "social": [],
+        "achivments": "#45B36B"
     },
     {
         "id": 3,
@@ -27,7 +29,8 @@ export const Users = [
         "description": "some words",
         "balance": 8.41,
         "cards": [],
-        "social": []
+        "social": [],
+        "achivments": "#3772FF"
     },
     {
         "id": 4,
@@ -37,17 +40,19 @@ export const Users = [
         "description": "some words",
         "balance": 100.94,
         "cards": [],
-        "social": []
+        "social": [],
+        "achivments": "#23262F"
     },
     {
         "id": 5,
         "nickName": "Payton",
-        "photo": 'img/avatars/payton-buckridje.png',
+        "photo": 'img/avatars/payton-buckridge.png',
         "name": "Payton Buckridge",
         "description": "some words",
         "balance": 35.67,
         "cards": [],
-        "social": []
+        "social": [],
+        "achivments": "#777E91"
     },
     {
         "id": 6,
@@ -57,6 +62,7 @@ export const Users = [
         "description": "some words",
         "balance": 7.45,
         "cards": [],
-        "social": []
+        "social": [],
+        "achivments": "#3772FF"
     }
 ]

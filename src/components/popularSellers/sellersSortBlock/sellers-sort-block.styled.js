@@ -43,6 +43,7 @@ export const StyledSellersSortBlock = styled.div`
 
         & img {
             transition: all 0.7s;
+            cursor: pointer;
         }
     }
 

@@ -1,4 +1,4 @@
-import styled from "styled-components";
+import styled from 'styled-components';
 
 export const StyledSellersSortBlock = styled.div`
     .sellers-sort-wraper {
@@ -43,6 +43,7 @@ export const StyledSellersSortBlock = styled.div`
 
         & img {
             transition: all 0.7s;
+            cursor: pointer;
         }
     }
 

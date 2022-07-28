@@ -4,11 +4,11 @@ import {TemplatePage} from "./TemplatePage";
 import {MainPage} from "./pages/main/main-page"
 import { NotFoundPage } from './pages/notFound/not-found-page';
 
-function App({users}) {
+function App({users, cards}) {
   return (
       <Routes>
           <Route path='/' element={<TemplatePage />}>
-            <Route path='/' element={<MainPage users={users} />} />
+            <Route path='/' element={<MainPage users={users} cards={cards} />} />
           </Route>
           <Route path="*" element={<NotFoundPage />} />
       </Routes>

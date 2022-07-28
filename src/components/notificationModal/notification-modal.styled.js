@@ -1,39 +1,70 @@
 import styled from "styled-components";
-// import {BtnCard} from '../../../ProfilePage/cardProfile/CardInfo.styled'
+import {ButtonBlue} from "../../globalStyled/styled.global"
 
+
+export const BtnModal = styled(ButtonBlue)`
+    margin-left: 69px;
+`
 
 export const StyledNotificationModal = styled.div`
-.block {
-    /* background: green;
-    border-radius: 10px; */
-    position: relative;
-    color: #fff;
-   }
-   .block::after {
-    content: '';
-    position: absolute;
-    color: green;
-    display: block;
-    height: 20px;
-    width: 20px;
-    background-color: inherit;
-    border: inherit;
-    position: absolute;
-    top: -9px;
-    left: calc(50% - 10px);
-    -webkit-clip-path: polygon(0% 0%,100% 100%,0% 100%);
-    clip-path: polygon(0% 0%,100% 100%,0% 100%);
-    -webkit-transform: rotate(-45deg);
-    -ms-transform: rotate(-45deg);
-    transform: rotate(135deg);
-    border-radius: 0 0 0 0.35em;
-   }
-  
+    .block {
+        position: relative;
+        color: #fff;
+    }
+
+    .block::after {
+        content: '';
+        position: absolute;
+        color: green;
+        display: block;
+        height: 20px;
+        width: 20px;
+        background-color: inherit;
+        border: inherit;
+        position: absolute;
+        top: -9px;
+        left: calc(50% - 10px);
+        -webkit-clip-path: polygon(0% 0%,100% 100%,0% 100%);
+        clip-path: polygon(0% 0%,100% 100%,0% 100%);
+        -webkit-transform: rotate(-45deg);
+        -ms-transform: rotate(-45deg);
+        transform: rotate(135deg);
+        border-radius: 0 0 0 0.35em;
+    }
+
+
+    .modal-wrapper {
+        overflow: hidden;
+        background-color: #777E91;
+    }
+    
+
     .modal-popup-active {
+        max-width: 450px;
+        overflow-y: auto;
+
+        ::-webkit-scrollbar,
+        ::-webkit-scrollbar {
+            height: 12px;
+            width: 12px;
+        }
+
+        ::-webkit-scrollbar-track,
+        ::-webkit-scrollbar-track {
+            background: #edeaef;
+        }
+
+        ::-webkit-scrollbar-thumb,
+        ::-webkit-scrollbar-thumb {
+            background-color: #dee2ea;
+            border-radius: 15px;
+            border: 2px solid #c5c6da;
+        }
+        /* scrollbar-width: thin;
+        scrollbar-color: blue orange; */
+        height: 550px;
         opacity: 1;
         display: block;
-        width: 396px;
-        height: 502px;
         background-color: white;
         display: flex;
         flex-direction: column;
@@ -107,7 +138,3 @@ export const StyledNotificationModal = styled.div`
         color: #777E91;
     }
 `
-
-// export const BtnModal = styled(BtnCard)`
-//     margin-left: 77px;
-// `

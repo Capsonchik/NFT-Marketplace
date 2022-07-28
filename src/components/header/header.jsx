@@ -32,7 +32,6 @@ const Header = () => {
                     <img src="img/icons/bell.png" alt="bell"/>
                     <NotificationModal showModal={showModal} setShowModal={setShowModal}/>
                 </button>
-
                 <button className="header-upload-btn">Upload</button>
                 <Login/>
             </HeaderFlexContainer>

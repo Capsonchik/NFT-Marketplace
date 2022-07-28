@@ -2,17 +2,17 @@ export const Cards = [
     {
         id: 1,
         img: 'img/cards/img101.png',
-        cardName: 'Amazing digital art',
+        cardName: 'Top Cube',
         price: 2.05,
         value: 'ETH',
         category: 'art',
         owner: 23262,
-        description: 'some text description'
+        description: 'Wonderful lines'
     },
     {
         id: 2,
         img: 'img/cards/img102.png',
-        cardName: 'Amazing digital art',
+        cardName: 'Night Ocean',
         price: 7.32,
         value: 'BTC',
         category: 'music',
@@ -22,7 +22,7 @@ export const Cards = [
     {
         id: 3,
         img: 'img/cards/img103.png',
-        cardName: 'Amazing digital art',
+        cardName: 'Pretty woman',
         price: 4.45,
         value: 'ETH',
         category: 'video',
@@ -32,7 +32,7 @@ export const Cards = [
     {
         id: 4,
         img: 'img/cards/img104.png',
-        cardName: 'Amazing digital art',
+        cardName: 'Wonderful lines',
         price: 15.015,
         value: 'ETH',
         category: 'photography',

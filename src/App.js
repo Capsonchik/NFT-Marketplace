@@ -2,7 +2,7 @@ import './App.css';
 import {Route, Routes} from "react-router-dom";
 import {TemplatePage} from "./TemplatePage";
 import {MainPage} from "./pages/main/main-page"
-import { NotFoundPage } from './pages/notFoundPage/notFoundPage';
+import { NotFoundPage } from './pages/notFound/not-found-page';
 
 function App() {
   return (

@@ -13,7 +13,7 @@ export const NotificationModal = ({showModal}) => {
                         <span>{el.day} days ago</span>
                     </div>
                 </div>
-                <img src="img/icons/modalBlueDot.png" alt="dot" />
+                <img src="img/icons/modal-blue-dot.png" alt="dot" />
             </div>
         )
     })

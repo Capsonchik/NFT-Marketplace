@@ -42,7 +42,7 @@ export const Users = [
     {
         "id": 5,
         "nickName": "Payton",
-        "photo": 'img/avatars/payton-buckridje.png',
+        "photo": 'img/avatars/payton-buckridge.png',
         "name": "Payton Buckridge",
         "description": "some words",
         "balance": 35.67,

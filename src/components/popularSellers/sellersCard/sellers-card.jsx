@@ -6,7 +6,7 @@ const SellersCard = ({users}) => {
         return(
             <div key={el.id} className='user'>
                 <div className='user__top'>
-                    <div className='user__top-achivments'>
+                    <div style={{ background:`${el.achivments}`}} className='user__top-achivments'>
                         #{el.id}
                     </div>
                     <div className='user__top-invite'>

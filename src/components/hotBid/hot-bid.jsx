@@ -1,6 +1,6 @@
 import { StyledHotBid } from './hot-bid.styled';
 import { Container, Header } from '../../globalStyled/styled.global';
-import Card from "../card/card";
+import Card from '../card/card';
 
 const HotBid = ({cards}) => {
     const sortedCardsArray = []

@@ -22,6 +22,7 @@ export const Header = styled.h2`
     color: #23262F;
     margin-bottom: 64px;
 `
+
 export const Button = styled.button`
     padding: 12px 16px;
     font-weight: 700;

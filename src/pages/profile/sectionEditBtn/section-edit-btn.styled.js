@@ -7,11 +7,6 @@ export const StyledSectionEditBtn = styled.div`
         padding-left: 12px;
         color: white;
 
-        &__shape {
-        margin-left: -12px;
-        margin-bottom: -2px;
-        }
-
         &__pencil {
             position: absolute;
             right: 15px;
@@ -37,19 +32,16 @@ export const EditProfile = styled(Button)`
     display: flex;
     align-items: center;
     cursor: pointer;
-
     transition: 0.5s linear;
 
     :hover {
         color: #fff;
         background: #3059c7;
         border: 2px solid transparent;
-    
     }
 `
 
 export const EditPhoto = styled(EditProfile)`
     margin-right: 20px;
     padding-right: 15px;
-
 `

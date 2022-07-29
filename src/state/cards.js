@@ -6,7 +6,7 @@ export const Cards = [
         price: 2.05,
         value: 'ETH',
         category: 'art',
-        owner: 23262,
+        owner: "Marlee",
         description: 'Wonderful lines'
     },
     {
@@ -16,7 +16,7 @@ export const Cards = [
         price: 7.32,
         value: 'BTC',
         category: 'music',
-        owner: 23262,
+        owner: "Marlee",
         description: 'some text description'
     },
     {
@@ -26,7 +26,7 @@ export const Cards = [
         price: 4.45,
         value: 'ETH',
         category: 'video',
-        owner: 23262,
+        owner: "Marlee",
         description: 'some text description'
     },
     {
@@ -36,7 +36,7 @@ export const Cards = [
         price: 15.015,
         value: 'ETH',
         category: 'photography',
-        owner: 23262,
+        owner: "Marlee",
         description: 'some text description'
     },
     {
@@ -46,7 +46,7 @@ export const Cards = [
         price: 15.015,
         value: 'ETH',
         category: 'music',
-        owner: 23262,
+        owner: "Marlee",
         description: 'some text description'
     },
     {

@@ -2,6 +2,7 @@ import EarnFreeCrypto from "../../components/earnFreeCrypto/earn-free-crypto";
 import PopularSellers from "../../components/popularSellers/popular-sellers";
 import NewEconomyBlock from "../../components/newCreativeEconomy/new-creative-economy";
 import HotBid from "../../components/hotBid/hot-bid";
+import HotCollection from "../../components/hotCollections/hot-collection";
 
 
 export const MainPage = ({users, cards}) => {
@@ -10,6 +11,7 @@ export const MainPage = ({users, cards}) => {
             <NewEconomyBlock/>
             <PopularSellers users={users}/>
             <HotBid cards={cards}/>
+            <HotCollection cards={cards} users={users}/>
             <EarnFreeCrypto/>
         </div>
     )

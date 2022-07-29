@@ -8,7 +8,26 @@ export const Users = [
         "balance": 27.45,
         "cards": [],
         "social": [],
-        "achivments": "#3772FF"
+        "achivments": "#3772FF",
+        "collections": [
+            {
+                collectionName: "Edwards Collection",
+                cardsCollection: [
+                    {
+                        id: 1
+                    },
+                    {
+                        id: 2
+                    },
+                    {
+                        id: 3
+                    },
+                    {
+                        id: 4
+                    }
+                ]
+            }
+        ]
     },
     {
         "id": 2,

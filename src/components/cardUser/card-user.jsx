@@ -4,23 +4,22 @@ import { StyledCardUser } from './card-user.styled';
 import {BtnCard, BtnDownload, BtnMore, BtnSocial, StyledCardInfo} from "./card-info.styled";
 
 
-export const CardUser = () => {
+export const CardUser = ({user}) => {
     return(
-        <div>
-            <StyledCardUser>
+        <StyledCardUser>
             <Container>
                  <StyledCardInfo >
-                     <img className='img-avatar' src='img/avatars/edd-harrys.png' alt="CardPhoto" />
-                     <h1>Enrico Cole</h1>
+                     <img className='img-avatar' src={user.photo} alt="CardPhoto" />
+                     <h1>{user.name}</h1>
                      <div>
-                        <span>0xc4c16a645...b21a</span>
+                        <span>{user.id}</span>
                          <img src='img/icons/card-filled.png' alt="filed" />
                      </div>
         
-                     <p>A wholesome farm owner in Montana. Upcoming gallery solo show in Germany</p>
+                     <p>{user.description}</p>
                      <div className='card-link'>
                          <img src='img/icons/card-globe.svg' alt="globe" />
-                         <Link to='#' className='card-link__text'>https://ui8.net</Link>
+                         <Link to='#' className='card-link__text'>{user.personalSite}</Link>
                      </div>
 
                      <div className='btn-wrapper'>
@@ -30,18 +29,21 @@ export const CardUser = () => {
                      </div>
 
                      <div className='btn-social'>
+                       <a href='https://twitter.com/?lang=ru' target="_blank">
                          <BtnSocial><img src='img/icons/card-twitter-btn.svg' alt="twitter" /></BtnSocial>
+                       </a>
+                       <a href='https://www.instagram.com/' target="_blank">
                          <BtnSocial><img src='img/icons/card-instagram-btn.svg' alt="instagram" /></BtnSocial>
+                       </a>
+                       <a href='https://www.facebook.com/' target="_blank">
                          <BtnSocial><img src='img/icons/card-facebook-btn.svg' alt="facebook" /></BtnSocial>
+                       </a>
                      </div>
                      <div className='history'>
-                        <p>Member since Mar 15, 2021</p>
+                        <p>Member since {user.registerDate}</p>
                      </div>
                  </StyledCardInfo>
             </Container>
-            </StyledCardUser>
-        </div>
-
-
+        </StyledCardUser>
     )
 }

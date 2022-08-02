@@ -4,10 +4,18 @@ export const Users = [
         "nickName": "Edd",
         "photo": 'img/avatars/edd-harrys.png',
         "name": "Edd Harrys",
-        "description": "some words",
+        "description": "A wholesome farm owner in Montana. Upcoming gallery solo show in Germany",
         "balance": 27.45,
+        "personalSite": "https://ui8.net",
         "cards": [],
-        "social": [],
+        "social": [
+            {
+                "twitter": "https://twitter.com/?lang=ru",
+                "instagram": "https://www.instagram.com/",
+                "facebook": "https://facebook.com",
+            }
+        ],
+        "registerDate": "Mar 15,2021",
         "achivments": "#3772FF",
         "collections": [
             {

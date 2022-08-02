@@ -1,7 +1,8 @@
 import { StyledProfilePage } from "./profile-page.styled"
 import { SectionEditBtn } from './sectionEditBtn/section-edit-btn'
 import { CardUser } from "../../components/cardUser/card-user"
-
+import {Navigation} from "./navigation/navigation.jsx";
+import {ContainerFlex} from "../../globalStyled/styled.global";
 
 
 export const ProfilePage = ({users}) => {
@@ -9,8 +10,11 @@ export const ProfilePage = ({users}) => {
 
     return(
         <StyledProfilePage>
-           <SectionEditBtn />
-           <CardUser user={user}/>
+            <SectionEditBtn />
+            <ContainerFlex>
+              <CardUser user={user}/>
+              <Navigation/>
+            </ContainerFlex>
         </StyledProfilePage>
     )
 }

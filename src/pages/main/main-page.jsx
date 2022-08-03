@@ -7,7 +7,7 @@ import { CreatorNetwork } from '../../components/creatorNetwork/creator-network'
 
 export const MainPage = ({ users, cards }) => {
     return(
-        <div className="main">
+        <div className='main'>
             <CreatorNetwork/>
             <NewEconomyBlock/>
             <PopularSellers users={ users }/>

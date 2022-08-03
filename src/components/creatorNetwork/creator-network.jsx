@@ -23,7 +23,7 @@ export const CreatorNetwork = () => {
     <Container>
       <StyledCreatorNetwork>
         <div className='creator-network '>
-          <img className='creator-network__img' src='img/cards/img103.png' alt="nft"/>
+          <img className='creator-network__img' src='img/cards/img103.png' alt='nft'/>
           <div className='creator-network__block-info'>
 
             <div className='creator-info'>

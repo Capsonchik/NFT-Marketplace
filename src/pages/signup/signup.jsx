@@ -1,4 +1,4 @@
-import { StyledSignup } from "./signup.styled"
+import { StyledSignup } from './signup.styled'
 import { Link } from 'react-router-dom'
 import Logo from '../../components/logo/logo'
 
@@ -53,12 +53,12 @@ export const Signup = () => {
               placeholder='Repeat password'/>
             <div className='popup__checkbox-block'>
               <input
-                type="checkbox"
-                className="custom-checkbox"
-                id="license"
-                name="license"
-                value="true"/>
-              <label for="license" className='popup__license'>accept the license agreement</label>
+                type='checkbox'
+                className='custom-checkbox'
+                id='license'
+                name='license'
+                value='true'/>
+              <label for='license' className='popup__license'>accept the license agreement</label>
             </div>
             <Link to='/signin'>
               <button type='submit' className='popup__submit'>Sign up</button>

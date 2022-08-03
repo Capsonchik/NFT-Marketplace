@@ -1,5 +1,5 @@
 import { StyledSignin } from './signin.styled'
-import {useRef} from "react"
+import { useRef } from 'react'
 import { Link, useNavigate } from 'react-router-dom'
 import Logo from '../../components/logo/logo'
 
@@ -13,43 +13,43 @@ export const Signin = () => {
 
   const closeModal = e => {
     if(modalRef.current === e.target) {
-      history("/");
+      history('/');
     }
   }
   
   return (
     <StyledSignin>
       <div className='popup' ref={modalRef} onClick={closeModal}>
-        <div className="popup__container">
+        <div className='popup__container'>
           <div className='popup__logo'>
             <Logo/>
           </div>
           <Link to='/'>
-            <div className="popup__cross"></div>
+            <div className='popup__cross'></div>
             </Link>
-          <h2 className="popup__title">Log in</h2>
+          <h2 className='popup__title'>Log in</h2>
           <form
             name='signin'
-            action="#"
-            method="post"
-            encType="multipart/form-data"
-            className="popup__form"
+            action='#'
+            method='post'
+            encType='multipart/form-data'
+            className='popup__form'
             noValidate
             onSubmit={onSubmit}>
             <input
-              type="email"
+              type='email'
               className='popup__input'
-              minlength="5"
-              maxlength="40"
+              minlength='5'
+              maxlength='40'
               placeholder='Email'/>
             <input
               type='password'
               className='popup__input'
-              minlength="4"
-              maxlength="30"
+              minlength='4'
+              maxlength='30'
               placeholder='Password' />
             <Link to='/profile'>
-              <button type="submit" className="popup__submit">Log in</button>
+              <button type='submit' className='popup__submit'>Log in</button>
             </Link>
             <Link to='/signup' className='popup__link'>Sign up</Link>
           </form>

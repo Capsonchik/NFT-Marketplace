@@ -51,5 +51,4 @@ export const EditProfile = styled(Button)`
 export const EditPhoto = styled(EditProfile)`
     margin-right: 20px;
     padding-right: 15px;
-
 `

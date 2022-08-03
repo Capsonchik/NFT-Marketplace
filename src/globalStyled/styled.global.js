@@ -16,6 +16,10 @@ export const FlexBoxColumn = styled.div`
     flex-direction: column;
 `
 
+export const ContainerFlex = styled(Container)`
+  display: flex;
+`
+
 export const Header = styled.h2`
     font-weight: 700;
     font-size: 40px;

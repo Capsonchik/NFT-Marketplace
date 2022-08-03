@@ -20,9 +20,8 @@ export const SectionEditBtn = () => {
                             <img className='button-img__pencil' src='img/icons/edit-btn-profile-pencil.png' alt="pencil" />
                         </Link>
                     </EditProfile>
-            
                 </FlexBtn>
-                </Container>
+            </Container>
         </StyledSectionEditBtn>
    
     )

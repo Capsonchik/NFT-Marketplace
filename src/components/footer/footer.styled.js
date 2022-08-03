@@ -83,15 +83,15 @@ export const StyledFooter = styled.footer`
     }
 
     .copiright-text {
-    font-weight: 400;
-    font-size: 12px;
-    padding-top: 32px;
-    padding-bottom: 32px;
-
-    & p {
-        color: #777E91;
-    }
-}
+      font-weight: 400;
+      font-size: 12px;
+      padding-top: 32px;
+      padding-bottom: 32px;
+  
+      & p {
+          color: #777E91;
+      }
+  }
 `
 
 export const ContainerFlex = styled(Container)` 

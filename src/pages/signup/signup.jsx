@@ -64,9 +64,9 @@ export const Signup = () => {
               <button type='submit' className='popup__submit'>Sign up</button>
               </Link>
             <dib className='popup__block-img'>
-              <img className='popup__img' src='img/social/twitter.png' alt='twitter'/>
-              <img className='popup__img' src='img/social/instagram.png' alt='instagram'/>
-              <img className='popup__img' src='img/social/facebook.png' alt='facebook'/>
+              <img className='popup__img' src='img/icons/card-twitter-btn.svg' alt='twitter'/>
+              <img className='popup__img' src='img/icons/card-instagram-btn.svg' alt='instagram'/>
+              <img className='popup__img' src='img/icons/card-facebook-btn.svg' alt='facebook'/>
             </dib>
             <Link to='/signin' className='popup__link'>Log in</Link>
           </form>

@@ -10,7 +10,7 @@ function App({users, cards}) {
       <Routes>
           <Route path='/' element={<TemplatePage />}>
             <Route path='/' element={<MainPage users={users} cards={cards} />} />
-            <Route path='/profile' element={<ProfilePage/>} />
+            <Route path='/profile' element={<ProfilePage users={users}/>} />
           </Route>
           <Route path="*" element={<NotFoundPage />} />
       </Routes>

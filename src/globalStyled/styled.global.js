@@ -11,9 +11,10 @@ export const FlexBox = styled.div`
     align-items: center;
 `
 
-export const FlexBoxColumn = styled.div`
+export const FlexBoxColumn = styled(Container)`
     display: flex;
     flex-direction: column;
+    margin: 0;
 `
 
 export const ContainerFlex = styled(Container)`

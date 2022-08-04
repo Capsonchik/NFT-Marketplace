@@ -115,7 +115,7 @@ export const Users = [
         "achivments": "#777E91",
         "collections": [
             {
-                collectionName: "Payton Collection",
+                collectionName: "Payton1 Collection",
                 cardsCollection: [5,14,19,20]
             }
         ]
@@ -139,7 +139,7 @@ export const Users = [
         "achivments": "#3772FF",
         "collections": [
             {
-                collectionName: "Edd Collection",
+                collectionName: "Edd1 Collection",
                 cardsCollection: [21,22,23]
             }
         ]

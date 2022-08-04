@@ -5,7 +5,7 @@ export const Cards = [
         cardName: 'Top Cube',
         price: 2.05,
         value: 'ETH',
-        category: 'Cubism',
+        category: 'Art',
         owner: "Marlee",
         description: 'Wonderful lines'
     },
@@ -15,7 +15,7 @@ export const Cards = [
         cardName: 'Night Ocean',
         price: 7.32,
         value: 'BTC',
-        category: 'Landscape',
+        category: 'Music',
         owner: "Marlee",
         description: 'some text description'
     },
@@ -25,7 +25,7 @@ export const Cards = [
         cardName: 'Pretty woman',
         price: 4.45,
         value: 'ETH',
-        category: 'Art',
+        category: 'Video',
         owner: "Marlee",
         description: 'some text description'
     },
@@ -35,7 +35,7 @@ export const Cards = [
         cardName: 'Wonderful lines',
         price: 15.015,
         value: 'ETH',
-        category: 'Geometric Abstractionism',
+        category: 'Art',
         owner: "Marlee",
         description: 'some text description'
     },
@@ -45,7 +45,7 @@ export const Cards = [
         cardName: 'Amazing digital art',
         price: 5.015,
         value: 'ETH',
-        category: 'Metarealism',
+        category: 'Music',
         owner: "Payton1",
         description: 'some text description'
     },
@@ -75,7 +75,7 @@ export const Cards = [
         cardName: 'Unexpected woman',
         price: 8.45,
         value: 'ETH',
-        category: 'Pop Art',
+        category: 'Photography',
         owner: 'Edd',
         description: 'some text description'
     },
@@ -95,7 +95,7 @@ export const Cards = [
         cardName: 'Mirror triangle',
         price: 2.89,
         value: 'ETH',
-        category: 'Cubism',
+        category: 'Game',
         owner: "Odell",
         description: 'some text description'
     },
@@ -105,7 +105,7 @@ export const Cards = [
         cardName: 'Sorceress mask',
         price: 3.003,
         value: 'ETH',
-        category: 'Photo',
+        category: 'Photography',
         owner: "Odell",
         description: 'some text description'
     },
@@ -125,7 +125,7 @@ export const Cards = [
         cardName: 'Black hole',
         price: 9.017,
         value: 'ETH',
-        category: 'Cosmism',
+        category: 'Game',
         owner: "Odell",
         description: 'some text description'
     },
@@ -135,7 +135,7 @@ export const Cards = [
         cardName: 'Beloved child',
         price: 7.015,
         value: 'ETH',
-        category: 'Painting',
+        category: 'Game',
         owner: "Payton1",
         description: 'some text description'
     },
@@ -155,7 +155,7 @@ export const Cards = [
         cardName: 'Propaganda',
         price: 3.035,
         value: 'ETH',
-        category: 'Art',
+        category: 'Photography',
         owner: "Payton",
         description: 'some text description'
     },
@@ -165,7 +165,7 @@ export const Cards = [
         cardName: 'Duriman',
         price: 7.045,
         value: 'ETH',
-        category: 'Photo',
+        category: 'Photography',
         owner: "Payton",
         description: 'some text description'
     },
@@ -185,7 +185,7 @@ export const Cards = [
         cardName: 'Northern lights',
         price: 4.15,
         value: 'ETH',
-        category: 'Actionism',
+        category: 'Music',
         owner: "Payton1",
         description: 'some text description'
     },
@@ -195,7 +195,7 @@ export const Cards = [
         cardName: 'Rainbow corner',
         price: 3.011,
         value: 'ETH',
-        category: 'Wonderful lines',
+        category: 'Music',
         owner: "Payton1",
         description: 'some text description'
     },
@@ -205,7 +205,7 @@ export const Cards = [
         cardName: 'Around the corner',
         price: 4.415,
         value: 'ETH',
-        category: 'Art',
+        category: 'Game',
         owner: "Edd1",
         description: 'some text description'
     },
@@ -215,7 +215,7 @@ export const Cards = [
         cardName: 'American girl',
         price: 3.813,
         value: 'ETH',
-        category: 'Comics',
+        category: 'Video',
         owner: "Edd1",
         description: 'some text description'
     },

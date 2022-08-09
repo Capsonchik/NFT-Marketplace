@@ -2,7 +2,6 @@ import styled from "styled-components";
 import {Button} from "../../globalStyled/styled.global";
 
 export const StyledEditProfile = styled.div`
-  
   .breadcrumbs-profile {
     display: flex;
     justify-content: space-between; 

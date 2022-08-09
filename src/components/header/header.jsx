@@ -25,11 +25,11 @@ const Header = () => {
                 <div className="header-input">
                     <input className="header-search" type="text" placeholder='Search'/>
                     <button className="search-button" type='submit'>
-                        <img src="img/icons/search.png" alt="search"/>
+                        <img src="/img/icons/search.png" alt="search"/>
                     </button>
                 </div>
                 <button onClick={openModal} className="img">
-                    <img src="img/icons/bell.png" alt="bell"/>
+                    <img src="/img/icons/bell.png" alt="bell"/>
                     <NotificationModal showModal={showModal} setShowModal={setShowModal}/>
                 </button>
                 <button className="header-upload-btn">Upload</button>

@@ -1,41 +1,89 @@
-import { useState, useEffect } from 'react'
-import { StyledCreatorNetwork } from './creator-network.styled'
-import { Container } from '../../globalStyled/styled.global'
+import {useState, useEffect} from 'react'
+import {StyledCreatorNetwork} from './creator-network.styled'
+import {Container} from '../../globalStyled/styled.global'
+import {Timer} from './timer/timer'
 
-export const CreatorNetwork = () => {
+export const CreatorNetwork = ({cards, users}) => {
 
-  const [hours, setHours] = useState()
-  const [minutes, setMinutes] = useState()
-  const [seconds, setSeconds] = useState()
-  const [course, setCourse] = useState({course:1595.1, crypto: 1.01, value: 0})
+  const [index, setIndex] = useState(5)
+  const auctionCard = {}
+
+  const newArrAuction = []
+  // содаю масив id карточек для аукционна
+  users.forEach((user) => {
+    if (user.auction.length > 0) {
+      user.auction.forEach((id) => {
+        newArrAuction.push(id)
+      })
+    }
+  })
+
+  const setDataCardAuction = () => {
+    cards.forEach((el) => {
+      if (el.id == newArrAuction[index]) {
+        auctionCard.card = el
+      }
+    })
+  }
+
+  const setDataUserAuction = () => {
+    users.forEach((user) => {
+      if (user.auction.length > 0) {
+        user.auction.forEach((id) => {
+          if (id == newArrAuction[index]) {
+            auctionCard.user = user
+          }
+        })
+      }
+    })
+  }
+
+  setDataUserAuction()
+  setDataCardAuction()
+
+  const perecklPlus = () => {
+    if(index > newArrAuction.length - 1){
+      setIndex( 0)
+    }else{
+      setIndex(index + 1)
+    }
+  }
+
+  const precklMinus = () => {
+    if(index < 0){
+      setIndex(newArrAuction.length -1)
+    }else{
+      setIndex(index - 1)
+    }
+  }
+
+  const [ vicupPrice, setVicupPrice] = useState('')
+
+
+  const [course, setCourse] = useState({course: 1595.1, crypto: auctionCard.card.price, value: 0})
 
   useEffect(() => {
-    setCourse({value:( course.course * course.crypto), course:1595.1, crypto: 1.01})
-  }, [])
-
-  setInterval(() => {
-      setHours(23 - new Date().getHours())
-      setMinutes(59 - new Date().getMinutes())
-      setSeconds(59 - new Date().getSeconds())
-  }, 1000)
+    setCourse({value: (course.course * course.crypto), course: 1595.1, crypto: auctionCard.card.price})
+    setVicupPrice(auctionCard.card.price * 3.5)
+  },)
 
   return (
     <Container>
       <StyledCreatorNetwork>
         <div className='creator-network '>
-          <img className='creator-network__img' src='img/cards/img103.png' alt='nft'/>
+          <img className='creator-network__img' src={auctionCard.card.img} alt='nft'/>
           <div className='creator-network__block-info'>
 
             <div className='creator-info'>
-              <h2 className='creator-info__title'>the creator network®</h2>
+              <h2 className='creator-info__title'>{auctionCard.card.cardName}</h2>
 
               <div className='creator-man'>
                 <div className='creator-man__block'>
-                  <img className='creator-man__img' src='img/avatars/edd-harrys.png' alt='creator'/>
+                  <img className='creator-man__img' src={auctionCard.user.photo} alt='creator'/>
 
                   <div className='creator-man__block-text'>
                     <p className='creator-man__text'>Creator</p>
-                    <p className='creator-man__nickname'>Enrico Cole</p>
+                    <p className='creator-man__nickname'>{auctionCard.user.name}</p>
                   </div>
                 </div>
 
@@ -44,7 +92,7 @@ export const CreatorNetwork = () => {
 
                   <div className='creator-man__block-text'>
                     <p className='creator-man__text'>Instant price</p>
-                    <p className='creator-man__nickname'>3.5 ETH</p>
+                    <p className='creator-man__nickname'>{vicupPrice} ETH</p>
                   </div>
                 </div>
               </div>
@@ -53,36 +101,25 @@ export const CreatorNetwork = () => {
 
             <div className='creator-current-bid'>
               <h4 className='creator-current-bid__text'>Current Bid</h4>
-              <h3 className='creator-current-bid__price-eth'>{course.crypto} ETH</h3>
+              <h3 className='creator-current-bid__price-eth'>{course.crypto} {auctionCard.card.value}</h3>
               <p className='creator-current-bid__price-dolar'>${course.value}</p>
               <h4 className='creator-current-bid__text'>Auction ending in</h4>
 
-              <div className='creator-current-bid__block-time'>
+              <Timer/>
 
-                <div className='creator-current-bid__auction-ending'>
-                  <p className='creator-current-bid__time'>{hours}</p>
-                  <p className='creator-current-bid__time-text'>Hrs</p>
-                </div>
-
-                <div className='creator-current-bid__auction-ending'>
-                  <p className='creator-current-bid__time'>{minutes}</p>
-                  <p className='creator-current-bid__time-text'>mins</p>
-                </div>
-
-                <div className='creator-current-bid__auction-ending'>
-                  <p className='creator-current-bid__time'>{seconds}</p>
-                  <p className='creator-current-bid__time-text'>secs</p>
-                </div>
-
-              </div>
             </div>
 
             <button className='creator-button__place-bid'>Place a bid</button>
             <button className='creator-button__view-item'>View item</button>
 
+            <div className='creator-button__pereckl-auction'>
+              <button className='creator-button__minus' onClick={precklMinus}>-</button>
+              <button className='creator-button__plus' onClick={perecklPlus}>+</button>
+            </div>
+
           </div>
         </div>
       </StyledCreatorNetwork>
-     </Container>
+    </Container>
   )
 }

@@ -7,7 +7,7 @@ export const Users = [
         "description": "A wholesome farm owner in Montana. Upcoming gallery solo show in Germany",
         "balance": 27.45,
         "personalSite": "https://ui8.net",
-        "cards": [],
+        "auction": [6,8],
         "social": [
             {
                 "twitter": "https://twitter.com/?lang=ru",
@@ -31,7 +31,7 @@ export const Users = [
         "name": "Odell Hane",
         "description": "some words",
         "balance": 3.22,
-        "cards": [],
+        "auction": [11],
         "social": [
             {
                 "twitter": "https://twitter.com/?lang=ru",
@@ -55,7 +55,7 @@ export const Users = [
         "name": "Marlee Kuphal",
         "description": "some words",
         "balance": 8.41,
-        "cards": [],
+        "auction": [3,4],
         "social": [
             {
                 "twitter": "https://twitter.com/?lang=ru",
@@ -79,7 +79,7 @@ export const Users = [
         "name": "Payton Kunde",
         "description": "some words",
         "balance": 100.94,
-        "cards": [],
+        "auction": [17],
         "social": [
             {
                 "twitter": "https://twitter.com/?lang=ru",
@@ -103,7 +103,7 @@ export const Users = [
         "name": "Payton Buckridge",
         "description": "some words",
         "balance": 35.67,
-        "cards": [],
+        "auction": [14,19],
         "social": [
             {
                 "twitter": "https://twitter.com/?lang=ru",
@@ -127,7 +127,7 @@ export const Users = [
         "name": "Edd Harrys",
         "description": "some words",
         "balance": 7.45,
-        "cards": [],
+        "auction": [21],
         "social": [
             {
                 "twitter": "https://twitter.com/?lang=ru",

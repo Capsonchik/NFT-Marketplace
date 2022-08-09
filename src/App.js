@@ -6,13 +6,15 @@ import { NotFoundPage } from './pages/notFound/not-found-page'
 import { ProfilePage } from './pages/profile/profile-page'
 import { Signin } from './pages/singnin/signin'
 import { Signup } from './pages/signup/signup'
+import {Users} from "./state/users.js"
+import {Cards} from './state/cards.js'
 
-function App({users, cards}) {
+function App() {
   return (
       <Routes>
           <Route path='/' element={<TemplatePage />}>
-            <Route index element={<MainPage users={users} cards={cards} />} />
-            <Route path='/profile' element={<ProfilePage />} />
+            <Route index element={<MainPage users={Users} cards={Cards} />} />
+            <Route path='/profile' element={<ProfilePage users={Users} cards={Cards} />} />
             <Route path='/signin' element={<Signin />} />
             <Route path='/signup' element={<Signup />} />
           </Route>

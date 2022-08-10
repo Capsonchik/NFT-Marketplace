@@ -1,6 +1,6 @@
-import {Link} from "react-router-dom";
-import useBreadcrumbs from "use-react-router-breadcrumbs";
-import styled from "styled-components";
+import {Link} from 'react-router-dom';
+import useBreadcrumbs from 'use-react-router-breadcrumbs';
+import styled from 'styled-components';
 
 
 const StyledBreadcrumbs = styled.div`
@@ -10,7 +10,7 @@ const StyledBreadcrumbs = styled.div`
 
   .breadcrumbs-link {
     text-decoration: none;
-    padding: 0 5px;
+    padding: 0 10px;
     color: black;
   }
 `

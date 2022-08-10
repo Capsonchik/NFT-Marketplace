@@ -21,17 +21,19 @@ export const StyledHeader = styled.header`
     .header-search {
         width: 254px;
         height: 40px;
-        border: 2px solid #E6E8EC;
-        border-radius: 8px 0px 0px 8px;
+        border: none;
         padding-left: 10px;
-        border-right: none;
         font-weight: 400;
         font-size: 12px;
         color: #777E91;
+        outline: none;
+        -webkit-appearance: none;
     }
 
     .header-input {
         display: flex;
+        border: 2px solid #E6E8EC;
+        border-radius: 12px;
 
         & img {
             cursor: pointer;
@@ -41,9 +43,7 @@ export const StyledHeader = styled.header`
     .search-button {
         background-color: inherit;
         height: 40px;
-        border: 2px solid #E6E8EC;
-        border-radius: 0px 8px 8px 0px;
-        border-left: none;
+        border: none;
         padding-right: 14px;
     }
 

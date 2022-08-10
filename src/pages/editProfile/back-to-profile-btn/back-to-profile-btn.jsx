@@ -1,6 +1,6 @@
-import {Link} from "react-router-dom";
-import {ButtonBack} from "../edit-profile.styled";
-import styled from "styled-components";
+import {Link} from 'react-router-dom';
+import {ButtonBack} from '../edit-profile.styled';
+import styled from 'styled-components';
 
 const StyledBackToProfile = styled.div`
   .vector-img {
@@ -15,7 +15,7 @@ const StyledBackToProfile = styled.div`
     cursor: pointer;
 
     &:hover {
-      background-color: #f0f3f7;
+      border: 2px solid black;
     }
   }
 `

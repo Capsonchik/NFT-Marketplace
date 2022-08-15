@@ -1,5 +1,5 @@
-import styled from "styled-components";
-import {ButtonBlue} from "../../globalStyled/styled.global"
+import styled from 'styled-components';
+import {ButtonBlue} from '../../globalStyled/styled.global'
 
 
 export const BtnModal = styled(ButtonBlue)`
@@ -21,52 +21,25 @@ export const StyledNotificationModal = styled.div`
         width: 20px;
         background-color: inherit;
         border: inherit;
-        position: absolute;
         top: -9px;
         left: calc(50% - 10px);
-        -webkit-clip-path: polygon(0% 0%,100% 100%,0% 100%);
         clip-path: polygon(0% 0%,100% 100%,0% 100%);
-        -webkit-transform: rotate(-45deg);
         -ms-transform: rotate(-45deg);
         transform: rotate(135deg);
         border-radius: 0 0 0 0.35em;
     }
-
-
+  
     .modal-wrapper {
-        overflow: hidden;
         background-color: #777E91;
     }
-    
 
     .modal-popup-active {
         max-width: 450px;
-        overflow-y: auto;
-
-        ::-webkit-scrollbar,
-        ::-webkit-scrollbar {
-            height: 12px;
-            width: 12px;
-        }
-
-        ::-webkit-scrollbar-track,
-        ::-webkit-scrollbar-track {
-            background: #edeaef;
-        }
-
-        ::-webkit-scrollbar-thumb,
-        ::-webkit-scrollbar-thumb {
-            background-color: #dee2ea;
-            border-radius: 15px;
-            border: 2px solid #c5c6da;
-        }
-        /* scrollbar-width: thin;
-        scrollbar-color: blue orange; */
+        overflow: auto;
         height: 550px;
         opacity: 1;
         display: block;
         background-color: white;
-        display: flex;
         flex-direction: column;
         align-items: flex-start;
         box-shadow: 0px 16px 64px -48px rgba(31, 47, 70, 0.4);
@@ -101,7 +74,6 @@ export const StyledNotificationModal = styled.div`
         display: flex;
         width: 200px;
         justify-content: space-between;
-        
     }
 
     .products-card {

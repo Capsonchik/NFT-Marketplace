@@ -1,5 +1,5 @@
-import styled from "styled-components";
-import {Button} from "../../globalStyled/styled.global";
+import styled from 'styled-components';
+import {Button} from '../../globalStyled/styled.global';
 
 export const StyledEditProfile = styled.div``
 
@@ -13,7 +13,7 @@ export const ButtonBack = styled(Button)`
 `
 
 export const ContainerInPercentage = styled.div`
-  width: 63%;
+  width: 66%;
   display: flex;
   flex-direction: column;
   margin: 0 auto;

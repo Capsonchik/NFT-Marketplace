@@ -65,68 +65,50 @@ export const StyledPersonalInformation = styled.div`
 .account {
   display: flex;
   flex-direction: column;
-  width: 48%;
+  width: 96%; 
 }
 
 .account-info {
   display: flex;
   flex-direction: column;
 }
-
-.text-yourself {
-  padding: 12px 16px;
+  
+.social-input {
+  display: flex;
   border: 2px solid #E6E8EC;
   border-radius: 12px;
-  font-weight: 500;
+  align-items: center;
+  
+  &:hover {
+    border-color: black;
+  }
+}
+  
+.plus {
+  padding-right: 12px;
+}
+
+.social-text {
+  font-weight: 400;
   font-size: 14px;
   line-height: 24px;
   display: flex;
   align-items: center;
   color: #777E91;
-  margin-bottom: 40px;
-  
-  &:hover {
-    border-color: black;
-    cursor: pointer;
-  }
+  border-bottom: 1px solid #E6E8EC;
+  padding-bottom: 40px;
+}
+
+.social-update__btn {
+  padding: 40px 0;
+  display: flex;
+  align-items: center;
+  margin-bottom: 136px;
 }
   
-  .social-input {
-    display: flex;
-    border: 2px solid #E6E8EC;
-    border-radius: 12px;
-    align-items: center;
-    
-    &:hover {
-      border-color: black;
-    }
-  }
-  
-  .plus {
-    padding-right: 12px;
-  }
-  
-  .social-text {
-    font-weight: 400;
-    font-size: 14px;
-    line-height: 24px;
-    display: flex;
-    align-items: center;
-    color: #777E91;
-    border-bottom: 1px solid #E6E8EC;
-    padding-bottom: 40px;
-  }
-
-  .social-update__btn {
-    padding: 40px 0;
-    display: flex;
-    align-items: center;
-    margin-bottom: 136px;
-  }
-  
-  .social-img__cross {
-    padding-right: 8px;
-  }
+.social-img__cross {
+  padding-right: 8px;
+}
 `
 
 export const Subtitle = styled.h1`
@@ -163,10 +145,9 @@ export const Input = styled.input`
   }
 `
 
-export const InputBorder = styled(Input)`
-  border: none;
-  outline: none;
-  -webkit-appearance: none;
+export const InputArea = styled(Input)`
+  padding-bottom: 37px;
+  margin-bottom: 40px;
 `
 
 export const ButtonUpload = styled(Button)`
@@ -189,7 +170,7 @@ export const ButtonAccount = styled(Button)`
   font-size: 14px;
   text-align: center;
   color: #23262F;
-  width: 63%;
+  width: 44%;
   height: 33px;
   margin-right: 5px;
   border: 2px solid #E6E8EC;

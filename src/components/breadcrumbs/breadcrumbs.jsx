@@ -21,9 +21,9 @@ export const Breadcrumbs = () => {
   return(
     <StyledBreadcrumbs>
       <div className="breadcrumbs">
-        {breadcrumbs.map(({breadcrumb, match}, index) => (
-          <div className="bc" key={match.url}>
-            <Link className='breadcrumbs-link' to={match.url || ""}>{breadcrumb}</Link>
+        {breadcrumbs.map(({breadcrumb}, index) => (
+          <div className="bc" key={index}>
+            <Link className='breadcrumbs-link' to={index || ""}>{breadcrumb}</Link>
             {index < breadcrumbs.length - 1 && ">"}
           </div>
         ))}

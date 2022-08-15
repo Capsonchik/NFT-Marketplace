@@ -1,22 +1,37 @@
 import {
-  ButtonAccount, ButtonClear, ButtonMoreSocial, ButtonUpdate,
+  ButtonAccount, ButtonClear, ButtonUpdate,
   ButtonUpload,
-  Input, InputBorder,
+  Input, InputArea,
   StyledPersonalInformation,
   Subtitle,
   Title
 } from './edit-personal-information.styled';
 import {Container, ContainerFlex} from '../../../globalStyled/styled.global';
+import { useState} from "react";
+import {ButtonAddInput} from '../../../components/dynamicAddInput/add-input';
+import {AddInput, AddTitle} from '../../../components/dynamicAddInput/add-input';
 
 
 export const EditPersonalInformation = ({user}) => {
+  const [components, setComponents] = useState(['twitter']);
+  const [componentNames, setComponentNames] = useState(['facebook', 'instagram', 'telegram', 'whatsApp' ]);
+
+  const addComponent = () => {
+    if (componentNames.length > 0) {
+      setComponents([...components, componentNames[0]]);
+      componentNames.splice(0, 1);
+    } else {
+      window.alert('No more social media to add!');
+    }
+  }
+
   return (
     <StyledPersonalInformation>
       <Container>
         <ContainerFlex>
           <div className='profile-photo'>
             <div className='profile-photo__img'>
-              <img className='profile-photo__avatar' src={user.photo} alt="CardPhoto" />
+              <img className='profile-photo__avatar' src={user.photo} alt='CardPhoto' />
             </div>
             <div className='information-user'>
               <h2 className='information-user__subtitle'>Profile photo</h2>
@@ -27,7 +42,7 @@ export const EditPersonalInformation = ({user}) => {
           </div>
           <div className='account'>
             <div className='account-info'>
-              <form className='account-info__form'>
+              <div className='account-info__form'>
                 <Subtitle>Account info</Subtitle>
                 <Title>display name</Title>
                 <Input
@@ -38,26 +53,29 @@ export const EditPersonalInformation = ({user}) => {
                   type='text'
                   placeholder='ui8.net/Your custom URL'/>
                 <Title>Bio</Title>
-                <textarea
-                  className='text-yourself'
-                  rows="4"
-                  cols="35"
+                <InputArea
+                  type='text'
+                  className='text-youselt'
                   placeholder='About yourselt in a few words'/>
-
                 <Subtitle>Social</Subtitle>
                 <Title>portfolio or website</Title>
                 <Input
                   type='text'
                   placeholder='Enter URL'/>
-                <Title>twitter</Title>
-                <div className='social-input'>
-                  <InputBorder type='text' placeholder='@twitter username'/>
-                  <ButtonAccount>Verify account</ButtonAccount>
+
+                <div className='dynamic-add__input'>
+                  {components.map((item, i) => (
+                    <div>
+                      <AddTitle title={item} />
+                      <div className='social-input'>
+                        <AddInput type='text' text={item} />
+                        <ButtonAccount>Verify account</ButtonAccount>
+                      </div>
+                    </div>
+                  ))}
+                  <ButtonAddInput onClick={addComponent} text='Add more social account'/>
                 </div>
-                <ButtonMoreSocial>
-                  <img className='plus' src='/img/icons/plus.png' alt='plus'/>
-                  Add more social account
-                </ButtonMoreSocial>
+
                 <p className='social-text'>To update your settings you should sign message through your wallet. Click 'Update profile' then sign the message</p>
                 <div className='social-update__btn'>
                   <ButtonUpdate>Update Profile</ButtonUpdate>
@@ -66,7 +84,7 @@ export const EditPersonalInformation = ({user}) => {
                     Clear all
                   </ButtonClear>
                 </div>
-              </form>
+              </div>
             </div>
           </div>
         </ContainerFlex>

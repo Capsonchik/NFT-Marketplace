@@ -6,7 +6,7 @@ import { NotFoundPage } from './pages/notFound/not-found-page'
 import { ProfilePage } from './pages/profile/profile-page'
 import { Signin } from './pages/singnin/signin'
 import { Signup } from './pages/signup/signup'
-import {EditProfile} from './pages/editProfile/edit-profile';
+import {EditProfile} from './pages/editProfile/edit-profile'
 
 function App({users, cards}) {
   return (

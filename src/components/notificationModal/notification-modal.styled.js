@@ -28,6 +28,10 @@ export const StyledNotificationModal = styled.div`
         transform: rotate(135deg);
         border-radius: 0 0 0 0.35em;
     }
+
+    .modal {
+      position: relative;
+    }
   
     .modal-wrapper {
         background-color: #777E91;
@@ -35,7 +39,6 @@ export const StyledNotificationModal = styled.div`
 
     .modal-popup-active {
         max-width: 450px;
-        overflow: auto;
         height: 550px;
         opacity: 1;
         display: block;
@@ -47,8 +50,8 @@ export const StyledNotificationModal = styled.div`
         padding: 40px 32px 0 32px;
         z-index: 2;
         position: absolute;
-        right: -184px;
-        top: 98px;
+        right: -189px;
+        top: 59px;
         transition: 0.8s ease;
     }
 

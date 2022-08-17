@@ -1,7 +1,7 @@
 import { BtnModal, StyledNotificationModal } from './notification-modal.styled'
 import {Cards} from '../../state/cards.js'
 
-export const NotificationModal = ({showModal}) => {
+export const NotificationModal = () => {
     const data = Cards.map(el => {
         return(
             <div key={el.id} className='products-card'>
@@ -20,13 +20,15 @@ export const NotificationModal = ({showModal}) => {
 
     return(
         <StyledNotificationModal className='modal-wrapper'>
-            {<div className={showModal ? 'modal-popup-active block' : 'modal-popup'}>
+            <div className='modal'>
+            <div className='modal-popup-active block'>
                 <div className='header-modal'>
                     <span>Notification</span>
                     <BtnModal>See all</BtnModal>
                 </div>
                 {data}
-            </div>}
+            </div>
+            </div>
         </StyledNotificationModal>
 
     )

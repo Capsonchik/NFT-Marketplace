@@ -30,6 +30,5 @@ export const NotificationModal = () => {
             </div>
             </div>
         </StyledNotificationModal>
-
     )
 }

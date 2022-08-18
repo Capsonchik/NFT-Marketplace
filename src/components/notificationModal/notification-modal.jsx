@@ -6,7 +6,7 @@ export const NotificationModal = () => {
         return(
             <div key={el.id} className='products-card'>
                 <div className='info-card'>
-                    <img className='img' src={el.img} alt='cardModalOne' />
+                    <img src={el.img} alt='cardModalOne' />
                     <div className='modal-text'>
                         <p className='modal-title'>ETH received</p>
                         <p className='modal-subtitle'>{el.price} ETH recived</p>
@@ -26,7 +26,9 @@ export const NotificationModal = () => {
                     <span>Notification</span>
                     <BtnModal>See all</BtnModal>
                 </div>
-                {data}
+                <div className='modal-popup-wrapper'>
+                  {data}
+                </div>
             </div>
             </div>
         </StyledNotificationModal>

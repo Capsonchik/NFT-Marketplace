@@ -7,6 +7,7 @@ export const StyledPopularSellers = styled.section`
         background: #F4F5F6;
     }
     .popular-sellers__slider {
+      margin-top: 20px;
         display: flex;
         justify-content: center;
         align-items: center;

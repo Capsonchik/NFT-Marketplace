@@ -38,7 +38,7 @@ export const StyledNotificationModal = styled.div`
     }
 
     .modal-popup-active {
-        max-width: 450px;
+        width: 396px;
         height: 550px;
         opacity: 1;
         display: block;
@@ -47,10 +47,10 @@ export const StyledNotificationModal = styled.div`
         align-items: flex-start;
         box-shadow: 0px 16px 64px -48px rgba(31, 47, 70, 0.4);
         border-radius: 24px;
-        padding: 40px 32px 0 32px;
+        padding: 32px 20px;
         z-index: 2;
         position: absolute;
-        right: -189px;
+        right: -186px;
         top: 59px;
         transition: 0.8s ease;
     }
@@ -60,9 +60,17 @@ export const StyledNotificationModal = styled.div`
         opacity: 0;
         transition: 0.5s ease;
     }
+    
+    .modal-popup-wrapper {
+      overflow: auto;
+      height: 87%;
+    }
 
     .header-modal {
       padding-bottom: 16px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
 
         & span {
             font-weight: 700;
@@ -77,20 +85,24 @@ export const StyledNotificationModal = styled.div`
         display: flex;
         width: 200px;
         justify-content: space-between;
+        & img {
+          border-radius: 16px;
+          width: 64px;
+          height: 64px;
+        }
     }
 
     .products-card {
+        width: 93%;
         display: flex;
         align-items: center;
         justify-content: space-between;
-        width: 335px;
-        padding: 13px 0;
+        margin-bottom: 18px;
+        :first-child {
+          margin-top: 15px;
+        }
     }
 
-    .img {
-        width: 64px;
-        height: 64px;
-    }
 
     .modal-title {
         font-weight: 500;

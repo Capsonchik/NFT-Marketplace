@@ -1,69 +1,37 @@
-import {useState, useEffect} from 'react'
-import {StyledCreatorNetwork} from './creator-network.styled'
-import {Container} from '../../globalStyled/styled.global'
-import {VicupPrice} from "./vicupPrice/vicup-price"
-import {Course} from "./course/course";
+import {useLayoutEffect, useState} from 'react'
+import { StyledCreatorNetwork } from './creator-network.styled'
+import { Container } from '../../globalStyled/styled.global'
+import { RedemptionPrice } from './redemptionPrice/redemption-price'
+import { Course } from './course/course';
 
 export const CreatorNetwork = ({cards, users}) => {
 
   const [index, setIndex] = useState(0)
   const auctionCard = {
-    user:[],
-    card:[]
+    user: [],
+    card: []
   }
 
   const newArrAuction = []
 
-  // проблемма в том что id карточек собираються каждый раз в нвый массив что плохо useEfect не помог если не получиться с ним мправиться
-  //то можно запустить от сюда другую функцию
-  useEffect(()=>{
     users.forEach((user) => {
       if (user.auction.length > 0) {
         user.auction.forEach((id) => {
           newArrAuction.push(id)
-          // console.log(user)
           auctionCard.user.push(user)
         })
       }
     })
-    fun()
-  },[])
 
-
-    // cards.forEach((el) => {
-    //   if (el.id == newArrAuction[index]) {
-    //     auctionCard.card = el
-    //   }
-    // })
-const fun = () => {
-  newArrAuction.forEach((id)=>{
-    cards.forEach((card)=>{
-      if(id === card.id){
-        auctionCard.card.push(card)
-      }
+    newArrAuction.forEach((id) => {
+      cards.forEach((card) => {
+        if (id === card.id) {
+          auctionCard.card.push(card)
+        }
+      })
     })
-  })
-}
 
-
-
-    // users.forEach((user) => {
-    //   if (user.auction.length > 0) {
-    //     user.auction.forEach((id) => {
-    //       if (id == newArrAuction[index]) {
-    //         auctionCard.user = user
-    //       }
-    //     })
-    //   }
-    // })
-
-  console.log('auctionCard', auctionCard)
-  // console.log('auctionCard', auctionCard.user)
-  // console.log('auctionCard', auctionCard.card)
-  console.log('newArrAuction', newArrAuction)
-
-
-  const perecklPlus = () => {
+  const stepUp = () => {
     if (index === newArrAuction.length - 1) {
       setIndex(0)
     } else {
@@ -71,7 +39,7 @@ const fun = () => {
     }
   }
 
-  const precklMinus = () => {
+  const stepDown = () => {
     if (index === 0) {
       setIndex(newArrAuction.length - 1)
     } else {
@@ -83,40 +51,47 @@ const fun = () => {
     <Container>
       <StyledCreatorNetwork>
         <div className='creator-network '>
-          <img className='creator-network__img' src={auctionCard.card.img} alt='nft'/>
+          <img className='creator-network__img' src={auctionCard.card[index].img} alt='nft'/>
           <div className='creator-network__block-info'>
 
             <div className='creator-info'>
-              <h2 className='creator-info__title'>{auctionCard.card.cardName}</h2>
+              <h2 className='creator-info__title'>{auctionCard.card[index].cardName}</h2>
 
               <div className='creator-man'>
                 <div className='creator-man__block'>
-                  <img className='creator-man__img' src={auctionCard.user.photo} alt='creator'/>
+                  <img className='creator-man__img' src={auctionCard.user[index].photo}
+                       alt='creator'/>
 
                   <div className='creator-man__block-text'>
                     <p className='creator-man__text'>Creator</p>
-                    <p className='creator-man__nickname'>{auctionCard.user.name}</p>
+                    <p className='creator-man__nickname'>{auctionCard.user[index].nickName}</p>
                   </div>
                 </div>
 
                 <div className='creator-man__block'>
                   <img className='creator-man__img' src='img/icons/ETH.png' alt='logo-ETH'/>
 
-                  <VicupPrice card={auctionCard.card}/>
-
+                  <RedemptionPrice
+                    card={auctionCard.card}
+                    index={index}/>
                 </div>
               </div>
-
             </div>
 
-            <Course card={auctionCard.card}/>
+            <Course
+              card={auctionCard.card}
+              index={index}/>
 
             <button className='creator-button__place-bid'>Place a bid</button>
             <button className='creator-button__view-item'>View item</button>
 
-            <div className='creator-button__pereckl-auction'>
-              <button className='creator-button__minus' onClick={precklMinus}>-</button>
-              <button className='creator-button__plus' onClick={perecklPlus}>+</button>
+            <div className='creator-button__switching-auction'>
+              <button className='creator-button__left creator-button__arrow' onClick={stepDown}>
+                <img src="img/icons/arrowLeft.png" alt="arrow left"/>
+              </button>
+              <button className='creator-button__right creator-button__arrow' onClick={stepUp}>
+                <img src="img/icons/arrowRight.png" alt="arrow right"/>
+              </button>
             </div>
 
           </div>

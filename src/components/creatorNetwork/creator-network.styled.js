@@ -9,19 +9,21 @@ export const StyledCreatorNetwork = styled.div`
 
     &__img {
       width: 57.15%;
+      height: 800px;
       border-radius: 20px;
     }
 
     &__block-info {
-      max-width: 352px;
+      width: 31.43%;
       display: flex;
       flex-direction: column;
-      align-items: center;
+
     }
   }
 
   .creator-info {
     &__title {
+      height: 128px;
       font-weight: 700;
       font-size: 64px;
       line-height: 64px;
@@ -164,26 +166,26 @@ export const StyledCreatorNetwork = styled.div`
       transform: scale(1.02);
       box-shadow: 5px 5px 5px #777E91;
     }
-    
-    &__pereckl-auction {
-      margin-top: 15px;
+
+    &__switching-auction {
+      margin-top: 25px;
       width: 300px;
       display: flex;
-      gap: 20px;
+      gap: 10px;
     }
-    
-    &__minus {
-      width: 30px;
-      height: 30px;
+
+    &__arrow {
+      width: 40px;
+      height: 40px;
       border-radius: 50%;
       cursor: pointer;
+      border: white;
+      background-color: white;
+      transition: border .2s;
     }
-    
-    &__plus {
-      width: 30px;
-      height: 30px;
-      border-radius: 50%;
-      cursor: pointer;
+
+    &__arrow:hover {
+      border: 2px solid rgba(22%, 45%, 100%, 0.15);
     }
   }
 `

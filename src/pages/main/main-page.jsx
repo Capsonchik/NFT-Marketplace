@@ -8,8 +8,8 @@ import { CreatorNetwork } from '../../components/creatorNetwork/creator-network'
 export const MainPage = ({ users, cards }) => {
     return(
         <div className='main'>
-            <CreatorNetwork cards={ cards } users={ users } />
             <NewEconomyBlock/>
+            <CreatorNetwork cards={ cards } users={ users } />
             <PopularSellers users={ users }/>
             <HotBid cards={ cards }/>
             <HotCollection cards={ cards } users={ users } />

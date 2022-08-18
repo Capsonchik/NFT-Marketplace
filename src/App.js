@@ -6,15 +6,22 @@ import { NotFoundPage } from './pages/notFound/not-found-page'
 import { ProfilePage } from './pages/profile/profile-page'
 import { Signin } from './pages/singnin/signin'
 import { Signup } from './pages/signup/signup'
-import {EditProfile} from './pages/editProfile/edit-profile'
+import { EditProfile } from './pages/editProfile/edit-profile';
 
-function App({users, cards}) {
+import {Users} from './state/users.js'
+import {Cards} from './state/cards.js'
+
+function App() {
   return (
       <Routes>
           <Route path='/' element={<TemplatePage />}>
-            <Route index element={<MainPage users={users} cards={cards} />} />
-            <Route path='/profile' element={<ProfilePage users={users} cards={cards} />} />
-            <Route path='/profile/edit' element={<EditProfile users={users}/>} />
+            <Route index element={<MainPage users={Users} cards={Cards} />} />
+            <Route path='/profile' element={<ProfilePage users={Users} cards={Cards} />} />
+
+            <Route index element={<MainPage users={Users} cards={Cards} />} />
+            <Route path='/profile' element={<ProfilePage users={Users} cards={Cards} />} />
+            <Route path='/profile/edit' element={<EditProfile users={Users}/>} />
+
             <Route path='/signin' element={<Signin />} />
             <Route path='/signup' element={<Signup />} />
           </Route>

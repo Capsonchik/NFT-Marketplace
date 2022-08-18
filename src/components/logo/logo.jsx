@@ -6,7 +6,7 @@ const Logo = () => {
     return(
         <StyledLogo>
             <Link to='/' className="logo">
-                <img src="img/icons/logo.png" alt='logo'/>
+                <img src="/img/icons/logo.png" alt='logo'/>
                 <h1>crypter</h1>
             </Link>
         </StyledLogo>

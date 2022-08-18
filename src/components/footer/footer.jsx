@@ -29,7 +29,7 @@ const Footer = () => {
                     <div className="footer-input">
                         <input type="text" placeholder='Enter your email' />
                         <button className="footer-btn">
-                            <img src="img/icons/footer-button.png" alt="button" />
+                            <img src="/img/icons/footer-button.png" alt="button" />
                         </button>
                     </div>
                 </div>

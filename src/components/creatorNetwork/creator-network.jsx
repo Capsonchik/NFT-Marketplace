@@ -1,71 +1,83 @@
 import {useState, useEffect} from 'react'
 import {StyledCreatorNetwork} from './creator-network.styled'
 import {Container} from '../../globalStyled/styled.global'
-import {Timer} from './timer/timer'
+import {VicupPrice} from "./vicupPrice/vicup-price"
+import {Course} from "./course/course";
 
 export const CreatorNetwork = ({cards, users}) => {
 
-  const [index, setIndex] = useState(5)
-  const auctionCard = {}
-
-  const newArrAuction = []
-  // содаю масив id карточек для аукционна
-  users.forEach((user) => {
-    if (user.auction.length > 0) {
-      user.auction.forEach((id) => {
-        newArrAuction.push(id)
-      })
-    }
-  })
-
-  const setDataCardAuction = () => {
-    cards.forEach((el) => {
-      if (el.id == newArrAuction[index]) {
-        auctionCard.card = el
-      }
-    })
+  const [index, setIndex] = useState(0)
+  const auctionCard = {
+    user:[],
+    card:[]
   }
 
-  const setDataUserAuction = () => {
+  const newArrAuction = []
+
+  // проблемма в том что id карточек собираються каждый раз в нвый массив что плохо useEfect не помог если не получиться с ним мправиться
+  //то можно запустить от сюда другую функцию
+  useEffect(()=>{
     users.forEach((user) => {
       if (user.auction.length > 0) {
         user.auction.forEach((id) => {
-          if (id == newArrAuction[index]) {
-            auctionCard.user = user
-          }
+          newArrAuction.push(id)
+          // console.log(user)
+          auctionCard.user.push(user)
         })
       }
     })
-  }
+    fun()
+  },[])
 
-  setDataUserAuction()
-  setDataCardAuction()
+
+    // cards.forEach((el) => {
+    //   if (el.id == newArrAuction[index]) {
+    //     auctionCard.card = el
+    //   }
+    // })
+const fun = () => {
+  newArrAuction.forEach((id)=>{
+    cards.forEach((card)=>{
+      if(id === card.id){
+        auctionCard.card.push(card)
+      }
+    })
+  })
+}
+
+
+
+    // users.forEach((user) => {
+    //   if (user.auction.length > 0) {
+    //     user.auction.forEach((id) => {
+    //       if (id == newArrAuction[index]) {
+    //         auctionCard.user = user
+    //       }
+    //     })
+    //   }
+    // })
+
+  console.log('auctionCard', auctionCard)
+  // console.log('auctionCard', auctionCard.user)
+  // console.log('auctionCard', auctionCard.card)
+  console.log('newArrAuction', newArrAuction)
+
 
   const perecklPlus = () => {
-    if(index > newArrAuction.length - 1){
-      setIndex( 0)
-    }else{
+    if (index === newArrAuction.length - 1) {
+      setIndex(0)
+    } else {
       setIndex(index + 1)
     }
   }
 
   const precklMinus = () => {
-    if(index < 0){
-      setIndex(newArrAuction.length -1)
-    }else{
+    if (index === 0) {
+      setIndex(newArrAuction.length - 1)
+    } else {
       setIndex(index - 1)
     }
   }
-
-  const [ vicupPrice, setVicupPrice] = useState('')
-
-
-  const [course, setCourse] = useState({course: 1595.1, crypto: auctionCard.card.price, value: 0})
-
-  useEffect(() => {
-    setCourse({value: (course.course * course.crypto), course: 1595.1, crypto: auctionCard.card.price})
-    setVicupPrice(auctionCard.card.price * 3.5)
-  },)
 
   return (
     <Container>
@@ -90,24 +102,14 @@ export const CreatorNetwork = ({cards, users}) => {
                 <div className='creator-man__block'>
                   <img className='creator-man__img' src='img/icons/ETH.png' alt='logo-ETH'/>
 
-                  <div className='creator-man__block-text'>
-                    <p className='creator-man__text'>Instant price</p>
-                    <p className='creator-man__nickname'>{vicupPrice} ETH</p>
-                  </div>
+                  <VicupPrice card={auctionCard.card}/>
+
                 </div>
               </div>
 
             </div>
 
-            <div className='creator-current-bid'>
-              <h4 className='creator-current-bid__text'>Current Bid</h4>
-              <h3 className='creator-current-bid__price-eth'>{course.crypto} {auctionCard.card.value}</h3>
-              <p className='creator-current-bid__price-dolar'>${course.value}</p>
-              <h4 className='creator-current-bid__text'>Auction ending in</h4>
-
-              <Timer/>
-
-            </div>
+            <Course card={auctionCard.card}/>
 
             <button className='creator-button__place-bid'>Place a bid</button>
             <button className='creator-button__view-item'>View item</button>

@@ -2,7 +2,7 @@ export const Users = [
     {
         "id": 1,
         "nickName": "Edd",
-        "photo": 'img/avatars/edd-harrys.png',
+        "photo": '/img/avatars/edd-harrys.png',
         "name": "Edd Harrys",
         "description": "A wholesome farm owner in Montana. Upcoming gallery solo show in Germany",
         "balance": 27.45,

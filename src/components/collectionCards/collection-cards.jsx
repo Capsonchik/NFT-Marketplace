@@ -1,27 +1,45 @@
-import { StyledCollectionCard } from './collection-cards.styled';
+import {StyledCollectionCard} from './collection-cards.styled';
 
-const CollectionCard = ({userCollection}) => {
-    return (
-        <StyledCollectionCard>
-            <img src="img/cardCollection//col4.png" alt="bird" />
-            <div className="collections__items">
-                <div className="collections__item">
-                    <img src="img/cardCollection//col2.png" alt="bird" />
-                </div>
-                <div className="collections__item">
-                    <img src="img/cardCollection//col3.png" alt="bird" />
-                </div>
-                <div className="collections__item">
-                    <img src="img/cardCollection//col1.png" alt="bird" />
-                </div>
-            </div>
-            <p className="collections__name">Awesome collection</p>
-            <div className="collections__owner">
-                <img src="img/userPhoto/01.png" alt="avatar" />
-                <div className="collections__owner-summary">28 items</div>
-            </div>
-        </StyledCollectionCard>
-    );
+const CollectionCard = ({cardCollection, cards}) => {
+  // Делаю массив исключительно с фото карточке объекта
+  const cardPhoto = []
+  let collectionName = ""
+  cardCollection.collections.forEach(card => {
+    collectionName = card.collectionName
+    card.cardsCollection.forEach(cardcol => {
+      cards.forEach(el => {
+        if (cardcol === el.id) {
+          cardPhoto.push(el.img)
+        }
+      })
+    })
+  })
+
+
+  return (
+      <StyledCollectionCard>
+        <img className='main-photo' src={cardPhoto[0]} alt="bird"/>
+        <div className="collections__items">
+          <div className="collections__item">
+            <img src={cardPhoto[1]} alt="bird"/>
+          </div>
+          <div className="collections__item">
+            <img src={cardPhoto[2]} alt="bird"/>
+          </div>
+          <div className="collections__item">
+            <img src={cardPhoto[3]} alt="bird"/>
+          </div>
+        </div>
+        <p className="collections__name">{collectionName}</p>
+        <div className="collections__owner">
+          <div className="owner-info">
+            <img src={cardCollection.photo} alt="avatar"/>
+            <p>By {cardCollection.name}</p>
+          </div>
+          <div className="collections__owner-summary">28 items</div>
+        </div>
+      </StyledCollectionCard>
+  );
 }
 
 export default CollectionCard;

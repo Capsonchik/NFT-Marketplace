@@ -1,7 +1,6 @@
-import { useState } from "react"
-import { NavLink } from "react-router-dom"
-import {StyledNavigation} from "./navigation.styled.js";
-
+import { useState } from 'react'
+import { NavLink } from 'react-router-dom'
+import { StyledNavigation } from './navigation.styled.js';
 
 
 export const Navigation = () => {

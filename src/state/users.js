@@ -2,7 +2,7 @@ export const Users = [
     {
         "id": 1,
         "nickName": "Edd",
-        "photo": "img/avatars/edd-harrys.png",
+        "photo": "/img/avatars/edd-harrys.png",
         "name": "Edd Harrys",
         "description": "A wholesome farm owner in Montana. Upcoming gallery solo show in Germany",
         "balance": 27.45,
@@ -27,7 +27,7 @@ export const Users = [
     {
         "id": 2,
         "nickName": "Odell",
-        "photo": 'img/avatars/odell-hane.png',
+        "photo": '/img/avatars/odell-hane.png',
         "name": "Odell Hane",
         "description": "some words",
         "balance": 3.22,
@@ -51,7 +51,7 @@ export const Users = [
     {
         "id": 3,
         "nickName": "Marlee",
-        "photo": 'img/avatars/marlee-kuphal.png',
+        "photo": '/img/avatars/marlee-kuphal.png',
         "name": "Marlee Kuphal",
         "description": "some words",
         "balance": 8.41,
@@ -75,7 +75,7 @@ export const Users = [
     {
         "id": 4,
         "nickName": "Payton",
-        "photo": 'img/avatars/paypon-kunde.png',
+        "photo": '/img/avatars/paypon-kunde.png',
         "name": "Payton Kunde",
         "description": "some words",
         "balance": 100.94,
@@ -99,7 +99,7 @@ export const Users = [
     {
         "id": 5,
         "nickName": "Payton1",
-        "photo": 'img/avatars/payton-buckridge.png',
+        "photo": '/img/avatars/payton-buckridge.png',
         "name": "Payton Buckridge",
         "description": "some words",
         "balance": 35.67,
@@ -123,7 +123,7 @@ export const Users = [
     {
         "id": 6,
         "nickName": "Edd1",
-        "photo": 'img/avatars/edd-harrys.png',
+        "photo": '/img/avatars/edd-harrys.png',
         "name": "Edd Harrys",
         "description": "some words",
         "balance": 7.45,

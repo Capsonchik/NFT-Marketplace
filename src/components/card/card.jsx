@@ -14,7 +14,7 @@ const Card = ({data}) => {
             </div>
             <div className="highest-bid">
                 <div className="highest-bid__header">
-                    <img src="img/icons/statistic.png" alt="stat" />
+                    <img src="/img/icons/statistic.png" alt="stat" />
                     <p>Highest bid <span>0.001 ETH</span></p>
                 </div>
                 <div className="highest-bid__new-bid">New Bid 🔥</div>

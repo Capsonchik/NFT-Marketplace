@@ -1,5 +1,5 @@
-import {StyledCollectionCard} from "./collection-card.styled";
-import {ContainerFlex} from "../../../globalStyled/styled.global";
+import {StyledCollectionCard} from './collection-card.styled';
+import {ContainerFlex} from '../../../globalStyled/styled.global';
 
 
 export const CollectionCardOnSale = ({card}) => {

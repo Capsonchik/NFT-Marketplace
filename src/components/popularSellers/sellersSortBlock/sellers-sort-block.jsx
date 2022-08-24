@@ -16,13 +16,13 @@ const SellersSortBlock = () => {
                     <h2>Popular</h2>
                     <div className='sellers-sort-left-block'>
                         <span>Sellers</span>
-                        <img src='img/icons/popular-sellers-arrow.png' alt="arrow" />
+                        <img src='/img/icons/popular-sellers-arrow.png' alt="arrow" />
                     </div>
                 </div>
                 <div className="popular-sellers__open-block">
                     <div onClick={clickToOpen} className='popular-sellers__date-sort'>
                         <span>Today</span>
-                        <img src='img/icons/circle-arrow-down.png' alt="arrow"/>
+                        <img src='/img/icons/circle-arrow-down.png' alt="arrow"/>
                     </div>
                     <div className="popular-sellers__open">
                         <span>Date Sort</span>

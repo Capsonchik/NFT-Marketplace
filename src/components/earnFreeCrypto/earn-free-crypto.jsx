@@ -15,7 +15,7 @@ const EarnFreeCrypto = () => {
                             <button className='discover'>Discover more</button>
                         </div>
                     </div>
-                    <img src='img/picture/footer-triengle.png' alt="earn-free-crypto" />
+                    <img src='/img/picture/footer-triengle.png' alt="earn-free-crypto" />
                 </div>
             </Container>
         </StyledEarnFreeCrypto>

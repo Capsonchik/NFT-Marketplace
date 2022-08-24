@@ -17,11 +17,7 @@ function App() {
           <Route path='/' element={<TemplatePage />}>
             <Route index element={<MainPage users={Users} cards={Cards} />} />
             <Route path='/profile' element={<ProfilePage users={Users} cards={Cards} />} />
-
-            <Route index element={<MainPage users={Users} cards={Cards} />} />
-            <Route path='/profile' element={<ProfilePage users={Users} cards={Cards} />} />
             <Route path='/profile/edit' element={<EditProfile users={Users}/>} />
-
             <Route path='/signin' element={<Signin />} />
             <Route path='/signup' element={<Signup />} />
           </Route>

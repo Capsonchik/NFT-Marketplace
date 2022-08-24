@@ -11,7 +11,7 @@ export const NotFoundPage = () => {
                     <h1 className='notFoundPage__title'>You got lost</h1>
                     <p className='notFoundPage__subtitle'>It seems that we can't find the page you are looking for</p>
                     <Link className='notFoundPage__home' to='/'>GO TO HOMEPAGE</Link>
-                    <img className='notFoundPage__img' src='img/icons/not-found.png' alt="not-found" />
+                    <img className='notFoundPage__img' src='/img/icons/not-found.png' alt="not-found" />
                 </div>  
             </Container>  
         </StyledNotFound>

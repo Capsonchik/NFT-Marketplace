@@ -1,7 +1,11 @@
 import { Container } from '../../globalStyled/styled.global'
 import { Link } from 'react-router-dom'
 import { StyledCardUser } from './card-user.styled';
-import {BtnCard, BtnDownload, BtnMore, BtnSocial, StyledCardInfo} from "./card-info.styled";
+import {BtnCard,
+        BtnDownload,
+        BtnMore,
+        BtnSocial,
+        StyledCardInfo} from './card-info.styled';
 
 
 export const CardUser = ({user}) => {

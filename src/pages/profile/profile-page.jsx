@@ -1,10 +1,10 @@
-import { StyledProfilePage } from "./profile-page.styled";
+import { StyledProfilePage } from './profile-page.styled';
 import { SectionEditBtn } from './sectionEditBtn/section-edit-btn';
-import { CardUser } from "../../components/cardUser/card-user";
-import {Navigation} from "./navigation/navigation.jsx";
-import {ContainerFlex, FlexBoxColumn} from "../../globalStyled/styled.global";
-import {CollectionCardOnSale} from "./collectionCard/collection-card-on-sale";
-import Card from "../../components/card/card";
+import { CardUser } from '../../components/cardUser/card-user';
+import {Navigation} from './navigation/navigation.jsx';
+import {ContainerFlex, FlexBoxColumn} from '../../globalStyled/styled.global';
+import {CollectionCardOnSale} from './collectionCard/collection-card-on-sale';
+import Card from '../../components/card/card';
 
 
 export const ProfilePage = ({users, cards}) => {

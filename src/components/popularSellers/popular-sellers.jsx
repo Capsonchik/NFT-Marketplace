@@ -36,7 +36,7 @@ const PopularSellers = ({users}) => {
                     </div>
                     <div className='popular-sellers__slider'>
                         <div onClick={swipeSlideLeft} className='arrow prev-arrow'>
-                            <img src='img/icons/circle-next-arrow.png' alt="prev-arrov" />
+                            <img src='/img/icons/circle-next-arrow.png' alt="prev-arrov" />
                         </div>
                         <div className='popular-sellers__slider-block'>
                             <div className='slider-wrapper'>
@@ -44,7 +44,7 @@ const PopularSellers = ({users}) => {
                             </div>
                         </div>
                         <div onClick={swipeSlideRight} className='arrow next-arrow'>
-                            <img src='img/icons/circle-next-arrow.png' alt="prev-arrow" />
+                            <img src='/img/icons/circle-next-arrow.png' alt="prev-arrow" />
                         </div>
                     </div>
                 </Container>

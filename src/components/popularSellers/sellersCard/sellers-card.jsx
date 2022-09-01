@@ -10,10 +10,10 @@ const SellersCard = ({users}) => {
                         #{el.id}
                     </div>
                     <div className='user__top-invite'>
-                        <img src='img/icons/add.png' alt="addbutton" />
+                        <img src='/img/icons/add.png' alt="addbutton" />
                     </div>
                     <div className='user__top-open'>
-                        <img src='img/icons/open-arrow.png' alt="inviteButton" />
+                        <img src='/img/icons/open-arrow.png' alt="inviteButton" />
                     </div>
                 </div>
                 <img className='user__photo' src={el.photo} alt='photo'/>

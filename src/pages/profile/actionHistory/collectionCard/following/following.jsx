@@ -9,9 +9,9 @@ export const Following = () => {
   const DataContext = useContext(CardContext)
 
   const getCards = (cards) => {
-    return cards.slice(5, 8).map(element => {
+    return cards.slice(9, 12).map(element => {
       return (
-        <div key={element.id} className='card'>
+        <div key={element.id} className="card">
           <Card data={element}/>
         </div>
       )

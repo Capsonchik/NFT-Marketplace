@@ -9,7 +9,7 @@ export const Likes = () => {
   const DataContext = useContext(CardContext)
 
   const getCards = (cards) => {
-    return cards.slice(4, 6).map(element => {
+    return cards.slice(5, 8).map(element => {
       return (
         <div key={element.id} className='card'>
           <Card data={element}/>

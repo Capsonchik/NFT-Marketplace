@@ -6,10 +6,16 @@ import {BtnCard,
         BtnMore,
         BtnSocial,
         StyledCardInfo} from './card-info.styled';
+import userContext from '../../userContext'
+import UserContext from '../../userContext'
+import {useContext} from 'react'
 
 
-export const CardUser = ({user}) => {
-    return(
+export const CardUser = () => {
+  const userCard = useContext(UserContext)
+  const user = userCard.find(user => user.id === 1)
+
+  return(
         <StyledCardUser>
             <Container>
                  <StyledCardInfo >

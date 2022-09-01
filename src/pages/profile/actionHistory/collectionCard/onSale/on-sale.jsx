@@ -11,7 +11,7 @@ export const OnSale = () => {
   const getCards = (cards) => {
     return cards.slice(cards.length - 3, cards.length).map(element => {
       return (
-        <div key={element.id} className='card'>
+        <div key={element.id} className="card">
           <Card data={element}/>
         </div>
       )

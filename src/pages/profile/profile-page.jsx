@@ -1,33 +1,36 @@
-import { StyledProfilePage } from './profile-page.styled';
-import { SectionEditBtn } from './sectionEditBtn/section-edit-btn';
-import { CardUser } from '../../components/cardUser/card-user';
-import {Navigation} from './navigation/navigation.jsx';
-import {ContainerFlex, FlexBoxColumn} from '../../globalStyled/styled.global';
-import {CollectionCardOnSale} from './collectionCard/collection-card-on-sale';
-import Card from '../../components/card/card';
+import {useEffect} from 'react'
+import {useLocation, useNavigate} from 'react-router-dom'
+import {
+  ContainerFlex,
+  FlexBoxColumn
+} from '../../globalStyled/styled.global'
+import {StyledProfilePage} from './profile-page.styled'
+import {SectionEditBtn} from './sectionEditBtn/section-edit-btn'
+import {CardUser} from '../../components/cardUser/card-user'
+import {ActionHistory} from './actionHistory/action-history'
 
 
-export const ProfilePage = ({users, cards}) => {
-  const user = users.find(user => user.id === 1)
+export const ProfilePage = () => {
+  const location = useLocation()
+  const navigate = useNavigate()
 
-  const card = cards.slice(cards.length - 3, cards.length).map(element => {
-    return(
-        <div key={element.id} className="card">
-          <Card data={element}/>
-        </div>
-    )
-  })
 
-    return(
-        <StyledProfilePage>
-            <SectionEditBtn />
-            <ContainerFlex>
-              <CardUser user={user}/>
-              <FlexBoxColumn>
-                <Navigation/>
-                <CollectionCardOnSale card={card}/>
-              </FlexBoxColumn>
-            </ContainerFlex>
-        </StyledProfilePage>
-    )
+  useEffect(() => {
+    if (location.pathname === '/profile') {
+      navigate('/profile/on-sale')
+    }
+  }, [location, navigate])
+
+
+  return (
+    <StyledProfilePage>
+      <SectionEditBtn/>
+      <ContainerFlex>
+        <CardUser/>
+        <FlexBoxColumn>
+          <ActionHistory/>
+        </FlexBoxColumn>
+      </ContainerFlex>
+    </StyledProfilePage>
+  )
 }

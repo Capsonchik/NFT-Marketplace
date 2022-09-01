@@ -10,6 +10,7 @@ import { EditProfile } from './pages/editProfile/edit-profile';
 
 import {Users} from './state/users.js'
 import {Cards} from './state/cards.js'
+import {CardItem} from "./pages/cardItem/card-item";
 
 function App() {
   return (
@@ -21,6 +22,7 @@ function App() {
             <Route index element={<MainPage users={Users} cards={Cards} />} />
             <Route path='/profile' element={<ProfilePage users={Users} cards={Cards} />} />
             <Route path='/profile/edit' element={<EditProfile users={Users}/>} />
+            <Route path='/card-item/:id' element={<CardItem />} />
 
             <Route path='/signin' element={<Signin />} />
             <Route path='/signup' element={<Signup />} />

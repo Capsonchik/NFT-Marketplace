@@ -6,30 +6,44 @@ import {NotFoundPage} from './pages/notFound/not-found-page'
 import {ProfilePage} from './pages/profile/profile-page'
 import {Signin} from './pages/singnin/signin'
 import {Signup} from './pages/signup/signup'
-import {EditProfile} from './pages/editProfile/edit-profile';
-
+import {EditProfile} from './pages/editProfile/edit-profile'
+import CardContext from './context'
 import {Users} from './state/users.js'
 import {Cards} from './state/cards.js'
+import {CardItem} from "./pages/cardItem/card-item";
+import {OnSale} from './pages/profile/actionHistory/collectionCard/onSale/on-sale'
+import {Collectibles} from './pages/profile/actionHistory/collectionCard/collectibles/collectibles'
+import {Likes} from './pages/profile/actionHistory/collectionCard/likes/likes'
+import {Created} from './pages/profile/actionHistory/collectionCard/created/created'
+import {Following} from './pages/profile/actionHistory/collectionCard/following/following'
+import {Followers} from './pages/profile/actionHistory/collectionCard/followers/followers'
+import UserContext from './userContext'
 
 function App() {
   return (
-      <Routes>
-        <Route path="/" element={<TemplatePage/>}>
-          <Route path='/' element={<MainPage users={Users} cards={Cards}/>}>
-            <Route path="/art" element={<p>test art</p>}/>
-            <Route path="/game" element={<p>test game</p>}/>
-            <Route path="/photography" element={<p>test photography</p>}/>
-            <Route path="/music" element={<p>test music</p>}/>
-            <Route path="/video" element={<p>test video</p>}/>
+    <CardContext.Provider value={Cards}>
+      <UserContext.Provider value={Users}>
+        <Routes>
+          <Route path="/" element={<TemplatePage/>}>
+            <Route index element={<MainPage users={Users} cards={Cards}/>}/>
+            <Route path="profile" element={<ProfilePage/>}>
+              <Route path="on-sale" element={<OnSale/>}/>
+              <Route path="collectibles" element={<Collectibles/>}/>
+              <Route path="created" element={<Created/>}/>
+              <Route path="likes" element={<Likes/>}/>
+              <Route path="following" element={<Following/>}/>
+              <Route path="followers" element={<Followers/>}/>
+            </Route>
+            <Route path="profile/edit" element={<EditProfile users={Users}/>}/>
+            <Route path='/card-item/:id' element={<CardItem />} />
+            <Route path="/signin" element={<Signin/>}/>
+            <Route path="/signup" element={<Signup/>}/>
           </Route>
-          <Route path="/profile" element={<ProfilePage users={Users} cards={Cards}/>}/>
-          <Route path="/profile/edit" element={<EditProfile users={Users}/>}/>
-          <Route path="/signin" element={<Signin/>}/>
-          <Route path="/signup" element={<Signup/>}/>
-        </Route>
-        <Route path="*" element={<NotFoundPage/>}/>
-      </Routes>
-  );
+          <Route path="*" element={<NotFoundPage/>}/>
+        </Routes>
+      </UserContext.Provider>
+    </CardContext.Provider>
+  )
 }
 
-export default App;
+export default App

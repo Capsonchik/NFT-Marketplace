@@ -149,6 +149,11 @@ export const StyledCreatorNetwork = styled.div`
     }
 
     &__view-item {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      color: #23262F;
+      text-decoration: none;
       margin-top: 10px;
       width: 100%;
       height: 48px;

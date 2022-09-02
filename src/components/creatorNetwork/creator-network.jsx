@@ -3,6 +3,7 @@ import { StyledCreatorNetwork } from './creator-network.styled'
 import { Container } from '../../globalStyled/styled.global'
 import { RedemptionPrice } from './redemptionPrice/redemption-price'
 import { Course } from './course/course';
+import {Link} from "react-router-dom";
 
 export const CreatorNetwork = ({cards, users}) => {
 
@@ -83,7 +84,7 @@ export const CreatorNetwork = ({cards, users}) => {
               index={index}/>
 
             <button className='creator-button__place-bid'>Place a bid</button>
-            <button className='creator-button__view-item'>View item</button>
+            <Link to={`/card-item/${newArrAuction[index]}`} className='creator-button__view-item'>View item</Link>
 
             <div className='creator-button__switching-auction'>
               <button className='creator-button__left creator-button__arrow' onClick={stepDown}>

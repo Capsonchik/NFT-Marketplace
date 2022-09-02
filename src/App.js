@@ -10,6 +10,7 @@ import {EditProfile} from './pages/editProfile/edit-profile'
 import CardContext from './context'
 import {Users} from './state/users.js'
 import {Cards} from './state/cards.js'
+import {CardItem} from "./pages/cardItem/card-item";
 import {OnSale} from './pages/profile/actionHistory/collectionCard/onSale/on-sale'
 import {Collectibles} from './pages/profile/actionHistory/collectionCard/collectibles/collectibles'
 import {Likes} from './pages/profile/actionHistory/collectionCard/likes/likes'
@@ -34,6 +35,7 @@ function App() {
               <Route path="followers" element={<Followers/>}/>
             </Route>
             <Route path="profile/edit" element={<EditProfile users={Users}/>}/>
+            <Route path='/card-item/:id' element={<CardItem />} />
             <Route path="/signin" element={<Signin/>}/>
             <Route path="/signup" element={<Signup/>}/>
           </Route>

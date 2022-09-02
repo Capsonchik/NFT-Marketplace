@@ -10,12 +10,11 @@ import {EditProfile} from './pages/editProfile/edit-profile'
 import CardContext from './context'
 import {Users} from './state/users.js'
 import {Cards} from './state/cards.js'
-import {CardItem} from "./pages/cardItem/card-item";
+import {CardItem} from './pages/cardItem/card-item';
 import {OnSale} from './pages/profile/actionHistory/collectionCard/onSale/on-sale'
 import {Collectibles} from './pages/profile/actionHistory/collectionCard/collectibles/collectibles'
 import {Likes} from './pages/profile/actionHistory/collectionCard/likes/likes'
 import {Created} from './pages/profile/actionHistory/collectionCard/created/created'
-import {Following} from './pages/profile/actionHistory/collectionCard/following/following'
 import {Followers} from './pages/profile/actionHistory/collectionCard/followers/followers'
 import UserContext from './userContext'
 
@@ -34,10 +33,10 @@ function App() {
               <Route path='following' element={<Followers/>}/>
               <Route path='followers' element={<Followers/>}/>
             </Route>
-            <Route path="profile/edit" element={<EditProfile users={Users}/>}/>
+            <Route path='profile/edit' element={<EditProfile users={Users}/>}/>
             <Route path='/card-item/:id' element={<CardItem />} />
-            <Route path="/signin" element={<Signin/>}/>
-            <Route path="/signup" element={<Signup/>}/>
+            <Route path='/signin' element={<Signin/>}/>
+            <Route path='/signup' element={<Signup/>}/>
           </Route>
           <Route path='*' element={<NotFoundPage/>}/>
         </Routes>

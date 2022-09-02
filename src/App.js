@@ -14,7 +14,6 @@ import {OnSale} from './pages/profile/actionHistory/collectionCard/onSale/on-sal
 import {Collectibles} from './pages/profile/actionHistory/collectionCard/collectibles/collectibles'
 import {Likes} from './pages/profile/actionHistory/collectionCard/likes/likes'
 import {Created} from './pages/profile/actionHistory/collectionCard/created/created'
-import {Following} from './pages/profile/actionHistory/collectionCard/following/following'
 import {Followers} from './pages/profile/actionHistory/collectionCard/followers/followers'
 import UserContext from './userContext'
 
@@ -23,21 +22,21 @@ function App() {
     <CardContext.Provider value={Cards}>
       <UserContext.Provider value={Users}>
         <Routes>
-          <Route path="/" element={<TemplatePage/>}>
+          <Route path='/' element={<TemplatePage/>}>
             <Route index element={<MainPage users={Users} cards={Cards}/>}/>
-            <Route path="profile" element={<ProfilePage/>}>
-              <Route path="on-sale" element={<OnSale/>}/>
-              <Route path="collectibles" element={<Collectibles/>}/>
-              <Route path="created" element={<Created/>}/>
-              <Route path="likes" element={<Likes/>}/>
-              <Route path="following" element={<Following/>}/>
-              <Route path="followers" element={<Followers/>}/>
+            <Route path='profile' element={<ProfilePage/>}>
+              <Route path='on-sale' element={<OnSale/>}/>
+              <Route path='collectibles' element={<Collectibles/>}/>
+              <Route path='created' element={<Created/>}/>
+              <Route path='likes' element={<Likes/>}/>
+              <Route path='following' element={<Followers/>}/>
+              <Route path='followers' element={<Followers/>}/>
             </Route>
-            <Route path="profile/edit" element={<EditProfile users={Users}/>}/>
-            <Route path="/signin" element={<Signin/>}/>
-            <Route path="/signup" element={<Signup/>}/>
+            <Route path='profile/edit' element={<EditProfile users={Users}/>}/>
+            <Route path='/signin' element={<Signin/>}/>
+            <Route path='/signup' element={<Signup/>}/>
           </Route>
-          <Route path="*" element={<NotFoundPage/>}/>
+          <Route path='*' element={<NotFoundPage/>}/>
         </Routes>
       </UserContext.Provider>
     </CardContext.Provider>

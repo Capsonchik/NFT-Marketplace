@@ -1,10 +1,9 @@
 import { Link } from 'react-router-dom'
-import Login from '../login/login'
 import { StyledHeader, HeaderFlexContainer } from './header.styled'
 import Logo from '../logo/logo'
 import {Modal} from '../modalPopUp/modal-pop-up'
 
-const Header = () => {
+const Header = ({actionButton}) => {
     return(
         <StyledHeader>
             <HeaderFlexContainer>
@@ -21,7 +20,7 @@ const Header = () => {
                 </div>
                 <Modal/>
                 <button className='header-upload-btn'>Upload</button>
-                <Login/>
+                {actionButton}
             </HeaderFlexContainer>
         </StyledHeader>
     )

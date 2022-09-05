@@ -83,14 +83,31 @@ export const StyledCollectionCard = styled.div`
       border-radius: 12px;
       margin-right: 8px;
     }
+    
+    &__button-blue {
+      padding: 8px 12px;
+      font-weight: 700;
+      font-size: 14px;
+      line-height: 16px;
+      background: #3772FF;
+      border-radius: 90px;
+      color: white;
+      margin: 0;
+      border: 1px solid transparent;
+      cursor: pointer;
+    }
+    
+    &__button-white {
+      padding: 8px 12px;
+      font-weight: 700;
+      font-size: 14px;
+      line-height: 16px;
+      background: white;
+      border-radius: 90px;
+      border: 1px solid gray;
+      margin: 0;
+      cursor: pointer;
+    }
   }
-`
-
-export const ButtonUser = styled(ButtonBlue)`
-  font-family: 'DM Sans';
-  padding: 8px 12px;
-  font-weight: 700;
-  font-size: 14px;
-  line-height: 16px;
 `
 

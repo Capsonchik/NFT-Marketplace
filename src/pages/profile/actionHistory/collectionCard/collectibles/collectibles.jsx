@@ -11,7 +11,7 @@ export const Collectibles = () => {
   const getCards = (cards) => {
     return cards.slice(2, cards.length).map(element => {
       return (
-        <div key={element.id} className='cards'>
+        <div key={element.id} className="cards">
           <Card data={element}/>
         </div>
       )
@@ -21,7 +21,7 @@ export const Collectibles = () => {
   return (
     <StyledCollectionCard>
       <ContainerFlex>
-        <div className='collectibles-flex'>
+        <div className="collectibles-flex">
           {getCards(DataContext)}
         </div>
       </ContainerFlex>

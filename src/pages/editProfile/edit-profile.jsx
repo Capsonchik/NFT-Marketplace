@@ -6,9 +6,7 @@ import {EditingHeader} from './editing-header/editing-header';
 import {EditPersonalInformation} from './edit-personal-information/edit-personal-information';
 
 
-export const EditProfile = ({users}) => {
-  const user = users.find(user => user.id === 1)
-
+export const EditProfile = () => {
   return(
     <StyledEditProfile>
       <Container>
@@ -18,7 +16,7 @@ export const EditProfile = ({users}) => {
         </ContainerBreadcrumbs>
         <ContainerInPercentage>
           <EditingHeader/>
-          <EditPersonalInformation user={user}/>
+          <EditPersonalInformation />
         </ContainerInPercentage>
       </Container>
     </StyledEditProfile>

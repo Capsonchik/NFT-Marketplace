@@ -35,7 +35,7 @@ function App() {
               <Route path="followers" element={<Followers/>}/>
             </Route>
             <Route path="profile/edit" element={<EditProfile users={Users}/>}/>
-            <Route path='/card-item/:id' element={<CardItem />} />
+            <Route path='/card-item/:id' element={<CardItem users={Users} cards={Cards}/>} />
             <Route path="/signin" element={<Signin/>}/>
             <Route path="/signup" element={<Signup/>}/>
           </Route>

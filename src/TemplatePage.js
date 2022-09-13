@@ -8,7 +8,7 @@ export const TemplatePage = () => {
   const location = useLocation()
 
   const headerButton = () => {
-    return location.pathname.startsWith('/profile')
+    return location.pathname.startsWith('/profile') || location.pathname.startsWith('/upload')
       ? <ProfileButton/>
       : <Login/>
   }

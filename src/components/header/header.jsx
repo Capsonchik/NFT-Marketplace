@@ -19,7 +19,9 @@ const Header = ({actionButton}) => {
                     </button>
                 </div>
                 <Modal/>
-                <button className='header-upload-btn'>Upload</button>
+                <Link to='upload'>
+                    <button className='header-upload-btn'>Upload</button>
+                </Link>
                 {actionButton}
             </HeaderFlexContainer>
         </StyledHeader>

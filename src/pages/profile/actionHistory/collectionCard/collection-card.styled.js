@@ -1,5 +1,4 @@
 import styled from 'styled-components'
-import {ButtonBlue} from '../../../../globalStyled/styled.global'
 
 export const StyledCollectionCard = styled.div`
   .cards {

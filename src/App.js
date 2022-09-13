@@ -17,6 +17,7 @@ import {Likes} from './pages/profile/actionHistory/collectionCard/likes/likes'
 import {Created} from './pages/profile/actionHistory/collectionCard/created/created'
 import {Followers} from './pages/profile/actionHistory/collectionCard/followers/followers'
 import UserContext from './userContext'
+import {UploadPage} from './pages/upload/upload-page'
 
 function App() {
   return (
@@ -25,6 +26,7 @@ function App() {
         <Routes>
           <Route path='/' element={<TemplatePage/>}>
             <Route index element={<MainPage users={Users} cards={Cards}/>}/>
+            <Route path='upload' element={<UploadPage/>}/>
             <Route path='profile' element={<ProfilePage/>}>
               <Route path='on-sale' element={<OnSale/>}/>
               <Route path='collectibles' element={<Collectibles/>}/>

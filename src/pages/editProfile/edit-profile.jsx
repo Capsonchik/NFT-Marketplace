@@ -1,8 +1,8 @@
 import {ContainerBreadcrumbs, ContainerInPercentage, StyledEditProfile} from './edit-profile.styled';
 import {Container} from '../../globalStyled/styled.global';
 import {Breadcrumbs} from '../../components/breadcrumbs/breadcrumbs';
-import {BackToProfile} from './back-to-profile-btn/back-to-profile-btn';
-import {EditingHeader} from './editing-header/editing-header';
+import {BackToButton} from '../../components/back-to-button/back-to-button'
+import {EditHeader} from './edit-header/edit-header';
 import {EditPersonalInformation} from './edit-personal-information/edit-personal-information';
 
 
@@ -13,11 +13,11 @@ export const EditProfile = ({users}) => {
     <StyledEditProfile>
       <Container>
         <ContainerBreadcrumbs>
-          <BackToProfile/>
+          <BackToButton/>
           <Breadcrumbs/>
         </ContainerBreadcrumbs>
         <ContainerInPercentage>
-          <EditingHeader/>
+          <EditHeader/>
           <EditPersonalInformation user={user}/>
         </ContainerInPercentage>
       </Container>

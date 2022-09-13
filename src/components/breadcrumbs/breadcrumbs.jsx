@@ -1,6 +1,6 @@
-import {Link} from 'react-router-dom';
-import useBreadcrumbs from 'use-react-router-breadcrumbs';
-import styled from 'styled-components';
+import {Link} from 'react-router-dom'
+import useBreadcrumbs from 'use-react-router-breadcrumbs'
+import styled from 'styled-components'
 
 
 const StyledBreadcrumbs = styled.div`
@@ -12,21 +12,26 @@ const StyledBreadcrumbs = styled.div`
     text-decoration: none;
     padding: 0 10px;
     color: black;
+
+    &:hover {
+      color: #777E91;
+    }
   }
 `
 
 export const Breadcrumbs = () => {
-  const breadcrumbs = useBreadcrumbs();
+  const breadcrumbs = useBreadcrumbs()
 
-  return(
+  return (
     <StyledBreadcrumbs>
       <div className="breadcrumbs">
-        {breadcrumbs.map(({breadcrumb}, index) => (
+        {breadcrumbs.map(({breadcrumb, match}, index) => (
           <div className="bc" key={index}>
-            <Link className='breadcrumbs-link' to={index || ""}>{breadcrumb}</Link>
-            {index < breadcrumbs.length - 1 && ">"}
+            <Link className="breadcrumbs-link" to={match.pathname || ''}>{breadcrumb}</Link>
+            {index < breadcrumbs.length - 1 && '>'}
           </div>
         ))}
       </div>
     </StyledBreadcrumbs>
-)}
+  )
+}

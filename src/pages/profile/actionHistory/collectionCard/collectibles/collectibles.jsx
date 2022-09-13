@@ -9,7 +9,7 @@ export const Collectibles = () => {
   const DataContext = useContext(CardContext)
 
   const getCards = (cards) => {
-    return cards.slice(2, cards.length).map(element => {
+    return cards.slice(1, cards.length).map(element => {
       return (
         <div key={element.id} className="cards">
           <Card data={element}/>

@@ -1,9 +1,9 @@
-import {useLayoutEffect, useState} from 'react'
+import { useState } from 'react'
 import { StyledCreatorNetwork } from './creator-network.styled'
 import { Container } from '../../globalStyled/styled.global'
 import { RedemptionPrice } from './redemptionPrice/redemption-price'
 import { Course } from './course/course';
-import {Link} from "react-router-dom";
+import { Link } from 'react-router-dom';
 
 export const CreatorNetwork = ({cards, users}) => {
 
@@ -70,7 +70,7 @@ export const CreatorNetwork = ({cards, users}) => {
                 </div>
 
                 <div className='creator-man__block'>
-                  <img className='creator-man__img' src='img/icons/ETH.png' alt='logo-ETH'/>
+                  <img className='creator-man__img' src='/img/icons/ETH.png' alt='logo-ETH'/>
 
                   <RedemptionPrice
                     card={auctionCard.card}
@@ -88,10 +88,10 @@ export const CreatorNetwork = ({cards, users}) => {
 
             <div className='creator-button__switching-auction'>
               <button className='creator-button__left creator-button__arrow' onClick={stepDown}>
-                <img src="img/icons/arrowLeft.png" alt="arrow left"/>
+                <img src="/img/icons/arrowLeft.png" alt="arrow left"/>
               </button>
               <button className='creator-button__right creator-button__arrow' onClick={stepUp}>
-                <img src="img/icons/arrowRight.png" alt="arrow right"/>
+                <img src="/img/icons/arrowRight.png" alt="arrow right"/>
               </button>
             </div>
 

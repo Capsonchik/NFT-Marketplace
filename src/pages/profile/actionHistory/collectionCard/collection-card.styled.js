@@ -4,6 +4,10 @@ import {ButtonBlue} from '../../../../globalStyled/styled.global'
 export const StyledCollectionCard = styled.div`
   .cards {
     margin-bottom: 40px;
+    width: 17vw;
+  }
+  .card {
+    width: 17vw;
   }
   
   .cards-flex {

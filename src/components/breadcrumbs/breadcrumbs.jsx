@@ -17,13 +17,14 @@ const StyledBreadcrumbs = styled.div`
 
 export const Breadcrumbs = () => {
   const breadcrumbs = useBreadcrumbs();
+  console.log(breadcrumbs)
 
   return(
     <StyledBreadcrumbs>
       <div className="breadcrumbs">
-        {breadcrumbs.map(({breadcrumb}, index) => (
+        {breadcrumbs.map(({breadcrumb, match}, index) => (
           <div className="bc" key={index}>
-            <Link className='breadcrumbs-link' to={index || ""}>{breadcrumb}</Link>
+            <Link className='breadcrumbs-link' to={match.pathname || ""}>{breadcrumb}</Link>
             {index < breadcrumbs.length - 1 && ">"}
           </div>
         ))}

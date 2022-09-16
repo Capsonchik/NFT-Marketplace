@@ -1,4 +1,4 @@
-import {useLayoutEffect, useState} from 'react'
+import {useState} from 'react'
 import { StyledCreatorNetwork } from './creator-network.styled'
 import { Container } from '../../globalStyled/styled.global'
 import { RedemptionPrice } from './redemptionPrice/redemption-price'
